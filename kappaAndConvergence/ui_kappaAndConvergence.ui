@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>UTM Kappa factor and Convergence</string>
+   <string>Kappa and Convergence</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">

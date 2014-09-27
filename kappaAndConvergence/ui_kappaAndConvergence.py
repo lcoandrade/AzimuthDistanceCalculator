@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_kappaAndConvergence.ui'
 #
-# Created: Fri Sep 26 23:38:54 2014
+# Created: Sat Sep 27 17:23:38 2014
 #      by: PyQt4 UI code generator 4.10.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -68,7 +68,7 @@ class Ui_Dialog(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "UTM Kappa factor and Convergence", None))
+        Dialog.setWindowTitle(_translate("Dialog", "Kappa and Convergence", None))
         self.label.setText(_translate("Dialog", "Longitude", None))
         self.longEdit.setToolTip(_translate("Dialog", "Use decimal degree values", None))
         self.label_2.setText(_translate("Dialog", "Latitude", None))
