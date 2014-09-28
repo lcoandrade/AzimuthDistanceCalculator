@@ -56,8 +56,12 @@ class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
         QObject.connect(self.azimuthsAndDistancesButton, SIGNAL("clicked()"), self.calculateAzimuths)
 
     def calculateKappa(self):
-        d = calculateKappaAndConvergence.CalculateKappaAndConvergenceDialog(self.iface)
-        d.exec_()
+        currentLayer = self.iface.mapCanvas().currentLayer()
+        if currentLayer:
+            d = calculateKappaAndConvergence.CalculateKappaAndConvergenceDialog(self.iface)
+            d.exec_()
+        else:
+            QMessageBox.warning(self.iface.mainWindow(), "Warning!", "Please, open a layer and select a line or polygon feature.")
 
     def calculateAzimuths(self):
         currentLayer = self.iface.mapCanvas().currentLayer()
