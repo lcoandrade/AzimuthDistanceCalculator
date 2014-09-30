@@ -50,7 +50,12 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         if (not self.distancesAndAzimuths) or (not self.points):
             QMessageBox.information(self.iface.mainWindow(), "Warning!", "Click on calculate button first to generate the needed data.")
         else:
-            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.distancesAndAzimuths, self.points)
+            confrontingList = list()
+            for i in xrange(self.tableWidget.rowCount()):
+                item = self.tableWidget.item(i, 7)
+                confrontingList.append(item.text())
+                
+            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.distancesAndAzimuths, self.points, confrontingList)
             d.exec_()
         
     def isValidType(self):
@@ -86,8 +91,6 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
     def fillTextEdit(self):
         """Makes the CSV.
         """
-        self.textEdit.clear()
-
         distancesAndAzimuths = list()
         isValid = self.isValidType()
         if isValid:
@@ -95,29 +98,39 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
             
         convergence = float(self.lineEdit.text())
             
-        self.textEdit.append("Vertex,E,N,Side,Planar Azimuth,Real Azimuth,Distance\n")
-        
         isClosed = False
         if self.points[0] == self.points[len(self.points) - 1]:
             isClosed = True
         
-        for i in xrange(0,len(distancesAndAzimuths) - 1):            
+        self.tableWidget.setRowCount(len(distancesAndAzimuths))
+
+        for i in xrange(0,len(distancesAndAzimuths)):            
             azimuth = self.dd2dms(distancesAndAzimuths[i][1])
             realAzimuth = self.dd2dms(distancesAndAzimuths[i][1] + convergence)
-
-            line  = str()
-            line += "Pt"+str(i)+","
-            line += str(self.points[i].x())+","
-            line += str(self.points[i].y())+","
-            if (i == len(distancesAndAzimuths) - 2) and isClosed:
-                line += "Pt"+str(i)+"-Pt0,"
-            else:
-                line += "Pt"+str(i)+"-Pt"+str(i+1)+","                
-            line += azimuth+","
-            line += realAzimuth+","
-            line += str(distancesAndAzimuths[i][0])+"\n"
             
-            self.textEdit.append(line)
+            itemVertex = QTableWidgetItem("Pt"+str(i))
+            self.tableWidget.setItem(i,0,itemVertex)
+            itemE = QTableWidgetItem(str(self.points[i].x()))
+            self.tableWidget.setItem(i,1,itemE)
+            itemN = QTableWidgetItem(str(self.points[i].y()))            
+            self.tableWidget.setItem(i,2,itemN)
+
+            if (i == len(distancesAndAzimuths) - 1) and isClosed:
+                itemSide = QTableWidgetItem("Pt"+str(i)+"-Pt0")
+                self.tableWidget.setItem(i,3,itemSide)
+            else:
+                itemSide = QTableWidgetItem("Pt"+str(i)+"-Pt"+str(i+1))
+                self.tableWidget.setItem(i,3,itemSide)
+
+            itemAz = QTableWidgetItem(azimuth)
+            self.tableWidget.setItem(i,4,itemAz)
+            itemRealAz = QTableWidgetItem(realAzimuth)
+            self.tableWidget.setItem(i,5,itemRealAz)
+            dist = "%0.2f"%(distancesAndAzimuths[i][0])            
+            itemDistance = QTableWidgetItem(dist)
+            self.tableWidget.setItem(i,6,itemDistance)
+            itemConfronting = QTableWidgetItem("")
+            self.tableWidget.setItem(i,7,itemConfronting)
         
     def clearTextEdit(self):
         self.textEdit.clear()

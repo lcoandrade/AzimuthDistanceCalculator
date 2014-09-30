@@ -31,7 +31,7 @@ import time
 
 class MemorialGenerator( QDialog, Ui_Dialog ):
     
-    def __init__(self, convergence, distancesAndAzimuths, points):
+    def __init__(self, convergence, distancesAndAzimuths, points, confrontingList):
         """Constructor.
         """
         QDialog.__init__( self )
@@ -47,6 +47,7 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         
         self.distancesAndAzimuths = distancesAndAzimuths
         self.points = points
+        self.confrontingList = confrontingList
         
     def setDirectory(self):
         folder = QFileDialog.getExistingDirectory(self, "Select Directory")
@@ -175,23 +176,19 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         description += "E "+str(self.points[0].x())+" m, "
         description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.dd2dms(self.meridianoEdit.text())+ ", localizado a ENDERECO, Código INCRA " +self.codIncraEdit.text()+ "; "
             
-        for i in xrange(0,len(self.distancesAndAzimuths) - 1):
+        for i in xrange(0,len(self.distancesAndAzimuths)):
             azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
 
-            description += " deste, segue confrontando com "
-            if (i == len(self.distancesAndAzimuths) - 2) and isClosed:
-                description += "Pt"+str(i)+"-Pt0,"
-            else:
-                description += "Pt"+str(i)+"-Pt"+str(i+1)+","
+            description += " deste, segue confrontando com "+self.confrontingList[i]+", "
             description += "com os seguintes azimute plano e distância:"
             description += azimuth+" e "
             dist = "%0.2f"%(self.distancesAndAzimuths[i][0])
             description += str(dist)+"; ate o vértice "
-            if (i == len(self.distancesAndAzimuths) - 2) and isClosed:
+            if (i == len(self.distancesAndAzimuths) - 1) and isClosed:
                 description += "Pt0, de coordenadas "
                 description += "N "+str(self.points[0].y())+" m e "
                 description += "E "+str(self.points[0].x())+" m, encerrando esta descrição."
-            elif (i == len(self.distancesAndAzimuths) - 2) and isClosed == False:
+            elif (i == len(self.distancesAndAzimuths) - 1) and isClosed == False:
                 description += "Pt"+str(i+1)+", de coordenadas "
                 description += "N "+str(self.points[i+1].y())+" m e "
                 description += "E "+str(self.points[i+1].x())+" m, encerrando esta descrição."

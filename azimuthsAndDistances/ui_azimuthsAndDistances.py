@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui_azimuthsAndDistances.ui'
 #
-# Created: Tue Sep 30 08:28:10 2014
-#      by: PyQt4 UI code generator 4.8.3
+# Created: Tue Sep 30 20:02:45 2014
+#      by: PyQt4 UI code generator 4.10.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,12 +12,21 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(530, 338)
+        Dialog.resize(723, 338)
         self.gridLayout = QtGui.QGridLayout(Dialog)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.label = QtGui.QLabel(Dialog)
@@ -36,9 +45,27 @@ class Ui_Dialog(object):
         self.lineEdit.setObjectName(_fromUtf8("lineEdit"))
         self.horizontalLayout.addWidget(self.lineEdit)
         self.gridLayout.addLayout(self.horizontalLayout, 1, 0, 1, 1)
-        self.textEdit = QtGui.QTextEdit(Dialog)
-        self.textEdit.setObjectName(_fromUtf8("textEdit"))
-        self.gridLayout.addWidget(self.textEdit, 2, 0, 1, 1)
+        self.tableWidget = QtGui.QTableWidget(Dialog)
+        self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
+        self.tableWidget.setColumnCount(8)
+        self.tableWidget.setRowCount(0)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(6, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(7, item)
+        self.gridLayout.addWidget(self.tableWidget, 2, 0, 1, 1)
         self.horizontalLayout_2 = QtGui.QHBoxLayout()
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.calculateButton = QtGui.QPushButton(Dialog)
@@ -56,12 +83,27 @@ class Ui_Dialog(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QtGui.QApplication.translate("Dialog", "Azimuths and Distances", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("Dialog", "Geometry Description", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("Dialog", "Inform the Meridian Convergence:", None, QtGui.QApplication.UnicodeUTF8))
-        self.lineEdit.setToolTip(QtGui.QApplication.translate("Dialog", "Use decimal degrees", None, QtGui.QApplication.UnicodeUTF8))
-        self.textEdit.setToolTip(QtGui.QApplication.translate("Dialog", "CSV text with Point, E, N, side, Planar azimuth, Real Azimuth and Distance", None, QtGui.QApplication.UnicodeUTF8))
-        self.calculateButton.setText(QtGui.QApplication.translate("Dialog", "Calculate", None, QtGui.QApplication.UnicodeUTF8))
-        self.clearButton.setText(QtGui.QApplication.translate("Dialog", "Clear", None, QtGui.QApplication.UnicodeUTF8))
-        self.saveFilesButton.setText(QtGui.QApplication.translate("Dialog", "Save Files", None, QtGui.QApplication.UnicodeUTF8))
+        Dialog.setWindowTitle(_translate("Dialog", "Azimuths and Distances", None))
+        self.label.setText(_translate("Dialog", "Geometry Description", None))
+        self.label_2.setText(_translate("Dialog", "Inform the Meridian Convergence:", None))
+        self.lineEdit.setToolTip(_translate("Dialog", "Use decimal degrees", None))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "Vertex", None))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "E", None))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "N", None))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("Dialog", "Side", None))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("Dialog", "Planar Azimuth", None))
+        item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("Dialog", "Real Azimuth", None))
+        item = self.tableWidget.horizontalHeaderItem(6)
+        item.setText(_translate("Dialog", "Distance", None))
+        item = self.tableWidget.horizontalHeaderItem(7)
+        item.setText(_translate("Dialog", "Confronting", None))
+        self.calculateButton.setText(_translate("Dialog", "Calculate", None))
+        self.clearButton.setText(_translate("Dialog", "Clear", None))
+        self.saveFilesButton.setText(_translate("Dialog", "Save Files", None))
 
