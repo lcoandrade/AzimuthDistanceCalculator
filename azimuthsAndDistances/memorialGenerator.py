@@ -183,7 +183,7 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
             description += "com os seguintes azimute plano e distância:"
             description += azimuth+" e "
             dist = "%0.2f"%(self.distancesAndAzimuths[i][0])
-            description += str(dist)+"; ate o vértice "
+            description += str(dist)+"; até o vértice "
             if (i == len(self.distancesAndAzimuths) - 1) and isClosed:
                 description += "Pt0, de coordenadas "
                 description += "N "+str(self.points[0].y())+" m e "
