@@ -19,6 +19,8 @@ import math
 
 from ui_azimuthsAndDistances import Ui_Dialog
 
+import memorialGenerator
+
 class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
     """Class that calculates azimuths and distances among vertexes in a linestring.
     """
@@ -31,14 +33,25 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         self.geom = geometry
         self.iface = iface
         self.points = None
+        self.distancesAndAzimuths = None
         
         # Connecting SIGNAL/SLOTS for the Output button
         QObject.connect(self.calculateButton, SIGNAL("clicked()"), self.fillTextEdit)
         
         # Connecting SIGNAL/SLOTS for the Output button
         QObject.connect(self.clearButton, SIGNAL("clicked()"), self.clearTextEdit)
+
+        # Connecting SIGNAL/SLOTS for the Output button
+        QObject.connect(self.saveFilesButton, SIGNAL("clicked()"), self.saveFiles)
         
         self.lineEdit.setInputMask("#00.00000")
+        
+    def saveFiles(self):
+        if (not self.distancesAndAzimuths) or (not self.points):
+            QMessageBox.information(self.iface.mainWindow(), "Warning!", "Click on calculate button first to generate the needed data.")
+        else:
+            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.distancesAndAzimuths, self.points)
+            d.exec_()
         
     def isValidType(self):
         """Verifies the geometry type.
@@ -60,15 +73,15 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
     def calculate(self):
         """Constructs a list with distances and azimuths.
         """
-        distancesAndAzimuths = list()
+        self.distancesAndAzimuths = list()
         for i in xrange(0,len(self.points)-1):
             before = self.points[i]
             after = self.points[i+1]
             distance = math.sqrt(before.sqrDist(after))
             azimuth = before.azimuth(after)
-            distancesAndAzimuths.append((distance, azimuth))
+            self.distancesAndAzimuths.append((distance, azimuth))
             
-        return distancesAndAzimuths
+        return self.distancesAndAzimuths
             
     def fillTextEdit(self):
         """Makes the CSV.
