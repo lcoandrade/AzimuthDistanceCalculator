@@ -88,7 +88,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         if self.points[0] == self.points[len(self.points) - 1]:
             isClosed = True
         
-        for i in xrange(0,len(distancesAndAzimuths) - 1):            
+        for i in xrange(0,len(distancesAndAzimuths)):            
             azimuth = self.dd2dms(distancesAndAzimuths[i][1])
             realAzimuth = self.dd2dms(distancesAndAzimuths[i][1] + convergence)
 
@@ -96,13 +96,14 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
             line += "Pt"+str(i)+","
             line += str(self.points[i].x())+","
             line += str(self.points[i].y())+","
-            if (i == len(distancesAndAzimuths) - 2) and isClosed:
+            if (i == len(distancesAndAzimuths) - 1) and isClosed:
                 line += "Pt"+str(i)+"-Pt0,"
             else:
                 line += "Pt"+str(i)+"-Pt"+str(i+1)+","                
             line += azimuth+","
             line += realAzimuth+","
-            line += str(distancesAndAzimuths[i][0])+"\n"
+            dist = "%0.2f"%(distancesAndAzimuths[i][0])
+            line += dist+"\n"
             
             self.textEdit.append(line)
         
