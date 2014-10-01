@@ -34,6 +34,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         self.iface = iface
         self.points = None
         self.distancesAndAzimuths = None
+        self.area = self.geom.area()
         
         # Connecting SIGNAL/SLOTS for the Output button
         QObject.connect(self.calculateButton, SIGNAL("clicked()"), self.fillTextEdit)
@@ -55,7 +56,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
                 item = self.tableWidget.item(i, 7)
                 confrontingList.append(item.text())
                 
-            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.distancesAndAzimuths, self.points, confrontingList)
+            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.distancesAndAzimuths, self.points, confrontingList, self.area, self.perimeter)
             d.exec_()
         
     def isValidType(self):
@@ -78,6 +79,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
     def calculate(self):
         """Constructs a list with distances and azimuths.
         """
+        self.perimeter = 0
         self.distancesAndAzimuths = list()
         for i in xrange(0,len(self.points)-1):
             before = self.points[i]
@@ -85,6 +87,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
             distance = math.sqrt(before.sqrDist(after))
             azimuth = before.azimuth(after)
             self.distancesAndAzimuths.append((distance, azimuth))
+            self.perimeter += distance
             
         return self.distancesAndAzimuths
             

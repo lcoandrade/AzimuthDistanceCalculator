@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>657</width>
-    <height>466</height>
+    <height>506</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -82,6 +82,20 @@
           </item>
           <item>
            <widget class="QLineEdit" name="comarcaEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>Endereço:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="enderecoEdit"/>
           </item>
          </layout>
         </item>
@@ -246,7 +260,7 @@
           <item>
            <widget class="QLineEdit" name="kappaEdit">
             <property name="text">
-             <string/>
+             <string>0.9996</string>
             </property>
            </widget>
           </item>
@@ -276,7 +290,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="convergenciaEdit"/>
+           <widget class="QLineEdit" name="convergenciaEdit">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>

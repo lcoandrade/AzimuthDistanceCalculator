@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'ui_memorialGenerator.ui'
 #
-# Created: Tue Sep 30 09:28:57 2014
-#      by: PyQt4 UI code generator 4.8.3
+# Created: Tue Sep 30 22:25:44 2014
+#      by: PyQt4 UI code generator 4.10.2
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -12,12 +12,21 @@ from PyQt4 import QtCore, QtGui
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
-    _fromUtf8 = lambda s: s
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName(_fromUtf8("Dialog"))
-        Dialog.resize(657, 466)
+        Dialog.resize(657, 506)
         self.gridLayout_7 = QtGui.QGridLayout(Dialog)
         self.gridLayout_7.setObjectName(_fromUtf8("gridLayout_7"))
         self.frame_5 = QtGui.QFrame(Dialog)
@@ -65,6 +74,15 @@ class Ui_Dialog(object):
         self.comarcaEdit.setObjectName(_fromUtf8("comarcaEdit"))
         self.horizontalLayout_8.addWidget(self.comarcaEdit)
         self.verticalLayout_6.addLayout(self.horizontalLayout_8)
+        self.horizontalLayout_9 = QtGui.QHBoxLayout()
+        self.horizontalLayout_9.setObjectName(_fromUtf8("horizontalLayout_9"))
+        self.label_22 = QtGui.QLabel(self.frame_5)
+        self.label_22.setObjectName(_fromUtf8("label_22"))
+        self.horizontalLayout_9.addWidget(self.label_22)
+        self.enderecoEdit = QtGui.QLineEdit(self.frame_5)
+        self.enderecoEdit.setObjectName(_fromUtf8("enderecoEdit"))
+        self.horizontalLayout_9.addWidget(self.enderecoEdit)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_9)
         self.gridLayout_5.addLayout(self.verticalLayout_6, 0, 0, 1, 1)
         self.verticalLayout_5 = QtGui.QVBoxLayout()
         self.verticalLayout_5.setObjectName(_fromUtf8("verticalLayout_5"))
@@ -166,7 +184,6 @@ class Ui_Dialog(object):
         self.label_19.setObjectName(_fromUtf8("label_19"))
         self.horizontalLayout.addWidget(self.label_19)
         self.kappaEdit = QtGui.QLineEdit(self.frame)
-        self.kappaEdit.setText(_fromUtf8(""))
         self.kappaEdit.setObjectName(_fromUtf8("kappaEdit"))
         self.horizontalLayout.addWidget(self.kappaEdit)
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -185,6 +202,7 @@ class Ui_Dialog(object):
         self.label_7.setObjectName(_fromUtf8("label_7"))
         self.horizontalLayout_3.addWidget(self.label_7)
         self.convergenciaEdit = QtGui.QLineEdit(self.frame)
+        self.convergenciaEdit.setText(_fromUtf8(""))
         self.convergenciaEdit.setObjectName(_fromUtf8("convergenciaEdit"))
         self.horizontalLayout_3.addWidget(self.convergenciaEdit)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
@@ -290,28 +308,30 @@ class Ui_Dialog(object):
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QtGui.QApplication.translate("Dialog", "Configurações dos arquivos", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("Dialog", "Nome do Imóvel:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("Dialog", "Proprietário:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("Dialog", "Município:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_4.setText(QtGui.QApplication.translate("Dialog", "Comarca:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_8.setText(QtGui.QApplication.translate("Dialog", "UF:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_9.setText(QtGui.QApplication.translate("Dialog", "Código INCRA:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_10.setText(QtGui.QApplication.translate("Dialog", "Matrícula:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_20.setText(QtGui.QApplication.translate("Dialog", "Número de Cadastro:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_11.setText(QtGui.QApplication.translate("Dialog", "Estação RBMC de origem:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_12.setText(QtGui.QApplication.translate("Dialog", "Coordenada E da RBMC:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_13.setText(QtGui.QApplication.translate("Dialog", "Coordenada N da RBMC:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_14.setText(QtGui.QApplication.translate("Dialog", "Localização da Estação RBMC:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_19.setText(QtGui.QApplication.translate("Dialog", "Fator Kappa:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_6.setText(QtGui.QApplication.translate("Dialog", "Meridiano Central:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_7.setText(QtGui.QApplication.translate("Dialog", "Convergencia Meridiana:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_21.setText(QtGui.QApplication.translate("Dialog", "Sistema  de projeção:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_5.setText(QtGui.QApplication.translate("Dialog", "DATUM:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_17.setText(QtGui.QApplication.translate("Dialog", "Código do Credencialmento:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_18.setText(QtGui.QApplication.translate("Dialog", "Número ART:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_15.setText(QtGui.QApplication.translate("Dialog", "Responsável Técnico:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_16.setText(QtGui.QApplication.translate("Dialog", "CREA:", None, QtGui.QApplication.UnicodeUTF8))
-        self.folderButton.setText(QtGui.QApplication.translate("Dialog", "Diretório para salvar arquivos:", None, QtGui.QApplication.UnicodeUTF8))
-        self.createButton.setText(QtGui.QApplication.translate("Dialog", "Criar arquivos", None, QtGui.QApplication.UnicodeUTF8))
+        Dialog.setWindowTitle(_translate("Dialog", "Configurações dos arquivos", None))
+        self.label.setText(_translate("Dialog", "Nome do Imóvel:", None))
+        self.label_2.setText(_translate("Dialog", "Proprietário:", None))
+        self.label_3.setText(_translate("Dialog", "Município:", None))
+        self.label_4.setText(_translate("Dialog", "Comarca:", None))
+        self.label_22.setText(_translate("Dialog", "Endereço:", None))
+        self.label_8.setText(_translate("Dialog", "UF:", None))
+        self.label_9.setText(_translate("Dialog", "Código INCRA:", None))
+        self.label_10.setText(_translate("Dialog", "Matrícula:", None))
+        self.label_20.setText(_translate("Dialog", "Número de Cadastro:", None))
+        self.label_11.setText(_translate("Dialog", "Estação RBMC de origem:", None))
+        self.label_12.setText(_translate("Dialog", "Coordenada E da RBMC:", None))
+        self.label_13.setText(_translate("Dialog", "Coordenada N da RBMC:", None))
+        self.label_14.setText(_translate("Dialog", "Localização da Estação RBMC:", None))
+        self.label_19.setText(_translate("Dialog", "Fator Kappa:", None))
+        self.kappaEdit.setText(_translate("Dialog", "0.9996", None))
+        self.label_6.setText(_translate("Dialog", "Meridiano Central:", None))
+        self.label_7.setText(_translate("Dialog", "Convergencia Meridiana:", None))
+        self.label_21.setText(_translate("Dialog", "Sistema  de projeção:", None))
+        self.label_5.setText(_translate("Dialog", "DATUM:", None))
+        self.label_17.setText(_translate("Dialog", "Código do Credencialmento:", None))
+        self.label_18.setText(_translate("Dialog", "Número ART:", None))
+        self.label_15.setText(_translate("Dialog", "Responsável Técnico:", None))
+        self.label_16.setText(_translate("Dialog", "CREA:", None))
+        self.folderButton.setText(_translate("Dialog", "Diretório para salvar arquivos:", None))
+        self.createButton.setText(_translate("Dialog", "Criar arquivos", None))
 

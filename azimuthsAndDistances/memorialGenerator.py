@@ -31,7 +31,7 @@ import time
 
 class MemorialGenerator( QDialog, Ui_Dialog ):
     
-    def __init__(self, convergence, distancesAndAzimuths, points, confrontingList):
+    def __init__(self, convergence, distancesAndAzimuths, points, confrontingList, geomArea, geomPerimeter):
         """Constructor.
         """
         QDialog.__init__( self )
@@ -48,6 +48,8 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         self.distancesAndAzimuths = distancesAndAzimuths
         self.points = points
         self.confrontingList = confrontingList
+        self.geomArea = geomArea
+        self.geomPerimeter = geomPerimeter
         
     def setDirectory(self):
         folder = QFileDialog.getExistingDirectory(self, "Select Directory")
@@ -95,10 +97,16 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         newData = newData.replace("[MUNICIPIO]", self.municipioEdit.text())
         newData = newData.replace("[COMARCA]", self.comarcaEdit.text())
         newData = newData.replace("[DATUM]", self.datumEdit.text())
-        newData = newData.replace("[MERIDIANO]", self.dd2dms(self.meridianoEdit.text()))
+        newData = newData.replace("[MERIDIANO]", self.meridianoEdit.text())
         newData = newData.replace("[KAPPA]", self.kappaEdit.text())
-        newData = newData.replace("[PERIMETRO]", self.projectionEdit.text())
-        newData = newData.replace("[AREA]", self.projectionEdit.text())
+        geomPerimeter = self.geomPerimeter*(float(self.kappaEdit.text()))
+        newData = newData.replace("[PERIMETRO]", "%0.2f"%(geomPerimeter))
+        geomArea = self.geomArea**(float(self.kappaEdit.text()))*(float(self.kappaEdit.text()))
+        newData = newData.replace("[AREA]", "%0.2f"%(geomArea))
+        
+        newData += "\n"
+        newData += "\n"
+        newData += "\n"
         
         newData += "Estação    Vante    Coordenada E    Coordenada N    Az Plano    Az Real    Distância\n"
         
@@ -152,7 +160,10 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         newData = newData.replace("[PROPRIETARIO]", self.proprietarioEdit.text())
         newData = newData.replace("[UF]", self.ufEdit.text())
         newData = newData.replace("[COD_INCRA]", self.codIncraEdit.text())
-        newData = newData.replace("[AREA]", self.projectionEdit.text())
+        geomPerimeter = self.geomPerimeter*(float(self.kappaEdit.text()))
+        newData = newData.replace("[PERIMETRO]", "%0.2f"%(geomPerimeter))
+        geomArea = self.geomArea*(float(self.kappaEdit.text()))*(float(self.kappaEdit.text()))
+        newData = newData.replace("[AREA]", "%0.2f"%(geomArea))
         newData = newData.replace("[COMARCA]", self.comarcaEdit.text())
         newData = newData.replace("[MUNICIPIO]", self.municipioEdit.text())
         newData = newData.replace("[MATRICULA]", self.matriculaEdit.text())
@@ -174,7 +185,7 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         description += "Inicia-se a descrição deste perímetro no vértice Pt0, de coordenadas "
         description += "N "+str(self.points[0].y())+" m e "
         description += "E "+str(self.points[0].x())+" m, "
-        description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.dd2dms(self.meridianoEdit.text())+ ", localizado a ENDERECO, Código INCRA " +self.codIncraEdit.text()+ "; "
+        description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.meridianoEdit.text()+ ", localizado a "+self.enderecoEdit.text()+", Código INCRA " +self.codIncraEdit.text()+ "; "
             
         for i in xrange(0,len(self.distancesAndAzimuths)):
             azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
