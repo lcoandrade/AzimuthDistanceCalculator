@@ -39,7 +39,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="toolTip">
+        <string>Use decimal degrees</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

@@ -35,7 +35,7 @@ class CalculateKappaAndConvergenceDialog( QDialog, Ui_Dialog ):
         QObject.connect(self.clearButton, SIGNAL("clicked()"), self.clearTextEdit)
         
         self.latEdit.setInputMask("#00.00000")
-        self.longEdit.setInputMask("#00.00000")
+        self.longEdit.setInputMask("#000.00000")
     
     def calculateKappa(self):
         """Calculates the linear deformation factor (Kappa) for UTM projections

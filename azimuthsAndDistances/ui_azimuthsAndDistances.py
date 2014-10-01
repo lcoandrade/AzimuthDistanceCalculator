@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui_azimuthsAndDistances.ui'
 #
-# Created: Fri Sep 26 23:40:27 2014
+# Created: Sat Sep 27 17:22:23 2014
 #      by: PyQt4 UI code generator 4.10.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -65,6 +65,7 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Azimuths and Distances", None))
         self.label.setText(_translate("Dialog", "Geometry Description", None))
         self.label_2.setText(_translate("Dialog", "Inform the Meridian Convergence:", None))
+        self.lineEdit.setToolTip(_translate("Dialog", "Use decimal degrees", None))
         self.textEdit.setToolTip(_translate("Dialog", "CSV text with Point, E, N, side, Planar azimuth, Real Azimuth and Distance", None))
         self.calculateButton.setText(_translate("Dialog", "Calculate", None))
         self.clearButton.setText(_translate("Dialog", "Clear", None))

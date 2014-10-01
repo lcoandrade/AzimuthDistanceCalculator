@@ -12,7 +12,7 @@
 name=Azimuth and Distance Calculator
 qgisMinimumVersion=2.0
 description=Calculates azimuths and distances
-version=0.1
+version=0.3
 author=Luiz Andrade
 email=luiz.claudio@dsg.eb.mil.br
 
@@ -31,7 +31,7 @@ tracker=https://hub.qgis.org/projects/azimuthdistances
 repository=https://github.com/lcoandrade/AzimuthDistanceCalculator
 icon=north.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version
 deprecated=False

@@ -56,16 +56,22 @@ class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
         QObject.connect(self.azimuthsAndDistancesButton, SIGNAL("clicked()"), self.calculateAzimuths)
 
     def calculateKappa(self):
-        d = calculateKappaAndConvergence.CalculateKappaAndConvergenceDialog(self.iface)
-        d.exec_()
+        currentLayer = self.iface.mapCanvas().currentLayer()
+        if currentLayer:
+            d = calculateKappaAndConvergence.CalculateKappaAndConvergenceDialog(self.iface)
+            d.exec_()
+        else:
+            QMessageBox.warning(self.iface.mainWindow(), "Warning!", "Please, open a layer and select a line or polygon feature.")
 
     def calculateAzimuths(self):
         currentLayer = self.iface.mapCanvas().currentLayer()
-        selectedFeatures = len(currentLayer.selectedFeatures())
-        if selectedFeatures == 1: 
-            selectedFeature = currentLayer.selectedFeatures()[0]
-            d = azimuthsAndDistances.AzimuthsAndDistancesDialog(self.iface, selectedFeature.geometry())
-            d.exec_()
+        if currentLayer:
+            selectedFeatures = len(currentLayer.selectedFeatures())
+            if selectedFeatures == 1: 
+                selectedFeature = currentLayer.selectedFeatures()[0]
+                d = azimuthsAndDistances.AzimuthsAndDistancesDialog(self.iface, selectedFeature.geometry())
+                d.exec_()
+            else:
+                QMessageBox.warning(self.iface.mainWindow(), "Warning!", "One and only one feature must be selected to perform the calculations.")
         else:
-            QMessageBox.warning(self.iface.mainWindow(), "Warning!", "One and only one feature must be selected to perform the calculations.")
-
+            QMessageBox.warning(self.iface.mainWindow(), "Warning!", "Please, open a layer and select a line or polygon feature.")
