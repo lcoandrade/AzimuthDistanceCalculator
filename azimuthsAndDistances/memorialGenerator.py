@@ -101,7 +101,7 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         newData = newData.replace("[KAPPA]", self.kappaEdit.text())
         geomPerimeter = self.geomPerimeter*(float(self.kappaEdit.text()))
         newData = newData.replace("[PERIMETRO]", "%0.2f"%(geomPerimeter))
-        geomArea = self.geomArea**(float(self.kappaEdit.text()))*(float(self.kappaEdit.text()))
+        geomArea = self.geomArea*(float(self.kappaEdit.text()))*(float(self.kappaEdit.text()))
         newData = newData.replace("[AREA]", "%0.2f"%(geomArea))
         
         newData += "\n"
