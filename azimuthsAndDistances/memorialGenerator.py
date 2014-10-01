@@ -14,6 +14,7 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from qgis.core import *
 from qgis.gui import *
+from PyQt4.QtXml import *
 
 import math
 import shutil
@@ -58,13 +59,13 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
     def copyAndRenameFiles(self):
         currentPath = os.path.dirname(__file__)
         templatePath = os.path.join(currentPath, "templates")
-        simpleMemorialTemplate = os.path.join(templatePath, "template_sintetico.ods")
+        simpleMemorialTemplate = os.path.join(templatePath, "template_sintetico.xml")
         fullMemorialTemplate = os.path.join(templatePath, "template_memorial.txt")
         seloTemplate = os.path.join(templatePath, "template_selo.txt")
         areaTemplate = os.path.join(templatePath, "template_area.txt")
         
         folder = self.folderEdit.text()
-        self.simpleMemorial = os.path.join(folder, "sintetico.ods")
+        self.simpleMemorial = os.path.join(folder, "sintetico.xml")
         self.fullMemorial = os.path.join(folder, "analitico.txt")
         self.selo = os.path.join(folder, "selo.txt")
         self.area = os.path.join(folder, "area.txt")
@@ -82,6 +83,66 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         self.createFullMemorial()
         
         self.createArea()
+        
+        self.createSimpleMemorial()
+        
+    def createCellElement(self, tempDoc, text):
+        cell = tempDoc.createElement("Cell")
+        data = tempDoc.createElement("Data")
+        cell.setAttribute("ss:StyleID", "ce1")
+        data.setAttribute("ss:Type", "String")
+        textElement = tempDoc.createTextNode(text)
+        data.appendChild(textElement)
+        cell.appendChild(data)
+        return cell
+        
+    def createSimpleMemorial(self):
+        tempDoc = QDomDocument()
+        simple = QFile(self.simpleMemorial)
+        simple.open(QIODevice.ReadOnly)
+        foi = tempDoc.setContent(simple)
+        simple.close()
+        
+        print foi
+        print tempDoc.toString()
+        
+        element = tempDoc.documentElement()
+         
+        nodes = element.elementsByTagName("Table")
+         
+        table = nodes.item(0).toElement()
+         
+        convergence = float(self.convergenciaEdit.text())
+             
+        isClosed = False
+        if self.points[0] == self.points[len(self.points) - 1]:
+            isClosed = True
+ 
+        for i in xrange(0,len(self.distancesAndAzimuths)):
+            lineElement = tempDoc.createElement("Row")
+            lineElement.setAttribute("ss:Height", "12.8409")
+             
+            azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
+            realAzimuth = self.dd2dms(self.distancesAndAzimuths[i][1] + convergence)
+             
+            lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)))
+             
+            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].x())))
+            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].y())))
+ 
+            if (i == len(self.distancesAndAzimuths) - 1) and isClosed:
+                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt0"))
+            else:
+                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt"+str(i+1)))
+ 
+            lineElement.appendChild(self.createCellElement(tempDoc, azimuth))
+            lineElement.appendChild(self.createCellElement(tempDoc, realAzimuth))
+            dist = "%0.2f"%(self.distancesAndAzimuths[i][0])            
+            lineElement.appendChild(self.createCellElement(tempDoc, dist))
+            
+            table.appendChild(lineElement)
+            
+        print tempDoc.toString()
         
     def createArea(self):
         isClosed = False
