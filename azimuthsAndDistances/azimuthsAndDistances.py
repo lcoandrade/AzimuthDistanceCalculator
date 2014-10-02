@@ -21,6 +21,9 @@ from ui_azimuthsAndDistances import Ui_Dialog
 
 import memorialGenerator
 
+import shapely.wkb
+import shapely.geometry
+
 class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
     """Class that calculates azimuths and distances among vertexes in a linestring.
     """
@@ -47,6 +50,47 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         
         self.lineEdit.setInputMask("#00.00000")
         
+    def clockWise(self, points):
+        n = len(points)
+        count = 0
+        for i in xrange(n):
+            j = (i+1)%n
+            k = (i+2)%n
+            z = (points[j].x() - points[i].x())*(points[k].y() - points[j].y())
+            z -= (points[j].y() - points[i].y())*(points[k].x() - points[j].x())
+            if z < 0:
+                count -= 1
+            elif z > 0:
+                count += 1
+                
+        if count > 0: #Is counter clockwise and we should revert it
+            points = points[::-1]
+
+        return points
+    
+    def setFirstPointToNorth(self, geometry):
+        oldShapelyGeom = shapely.wkb.loads(geometry.asWkb())
+        
+        yMax = oldShapelyGeom.bounds[3]
+        coords = list(oldShapelyGeom.exterior.coords)
+        if coords[0][1] == yMax:
+            return geometry
+        
+        coords.pop()
+        firstPart = []
+        for i in range(len(coords)):
+            firstPart.append(coords[i])
+            if coords[i][1] == yMax:
+                break
+            
+        polygon = shapely.geometry.Polygon(coords[i:] + firstPart)
+        newWkb = shapely.wkb.dumps(polygon)
+        newGeom = QgsGeometry()
+        newGeom.fromWkb(newWkb)
+        print newGeom.asPolygon()[0]
+        
+        return newGeom
+
     def saveFiles(self):
         if (not self.distancesAndAzimuths) or (not self.points):
             QMessageBox.information(self.iface.mainWindow(), "Warning!", "Click on calculate button first to generate the needed data.")
