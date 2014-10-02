@@ -263,6 +263,8 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         newData = newData.replace("[DATA]", time.strftime("%d/%m/%Y"))
         newData = newData.replace("[AUTOR]", self.autorEdit.text())
         newData = newData.replace("[CREA]", self.creaEdit.text())
+        newData = newData.replace("[CREDENCIAMENTO]", self.credenciamentoEdit.text())
+        newData = newData.replace("[ART]", self.artEdit.text())
         
         memorial = open(self.fullMemorial, "w")
         memorial.write(newData)
@@ -291,10 +293,24 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
                 description += "Pt0, de coordenadas "
                 description += "N "+str(self.points[0].y())+" m e "
                 description += "E "+str(self.points[0].x())+" m, encerrando esta descrição."
+                description += " Todas as coordenadas aqui descritas estão georrefereciadas ao Sistema Geodésico Brasileiro, "
+                description += "a partir da estação RBMC de "+self.rbmcOrigemEdit.text()+" de coordenadas "
+                description += "E "+self.rbmcEsteEdit.text()+" m e N "+self.rbmcNorteEdit.text()+" m, "
+                description += "localizada em "+self.localRbmcEdit.text()+", "
+                description += "e encontram-se representadas no sistema UTM, referenciadas ao Meridiano Central "+self.meridianoEdit.text()
+                description += ", tendo como DATUM "+self.datumEdit.text()+"."
+                description += "Todos os azimutes e distâncias, área e perímetro foram calculados no plano de projeção UTM."
             elif (i == len(self.distancesAndAzimuths) - 1) and isClosed == False:
                 description += "Pt"+str(i+1)+", de coordenadas "
                 description += "N "+str(self.points[i+1].y())+" m e "
                 description += "E "+str(self.points[i+1].x())+" m, encerrando esta descrição."
+                description += " Todas as coordenadas aqui descritas estão georrefereciadas ao Sistema Geodésico Brasileiro, "
+                description += "a partir da estação RBMC de "+self.rbmcOrigemEdit.text()+" de coordenadas "
+                description += "E "+self.rbmcEsteEdit.text()+" m e N "+self.rbmcNorteEdit.text()+" m, "
+                description += "localizada em "+self.localRbmcEdit.text()+", "
+                description += "e encontram-se representadas no sistema UTM, referenciadas ao Meridiano Central "+self.meridianoEdit.text()
+                description += ", tendo como DATUM "+self.datumEdit.text()+"."
+                description += "Todos os azimutes e distâncias, área e perímetro foram calculados no plano de projeção UTM."
             else:
                 description += "Pt"+str(i+1)+", de coordenadas "
                 description += "N "+str(self.points[i+1].y())+" m e "

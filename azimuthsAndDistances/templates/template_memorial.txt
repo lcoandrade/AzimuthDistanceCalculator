@@ -1,4 +1,4 @@
-MEMORIAL DESCRITIVO
+﻿MEMORIAL DESCRITIVO
 
 Imóvel: [IMOVEL]							Comarca: [COMARCA]
 Proprietário: [PROPRIETARIO]
@@ -15,3 +15,4 @@ Código INCRA: [COD_INCRA]			Matrícula: [MATRICULA]
 ________________________________
 [AUTOR]
 CREA: [CREA]
+Código Credenciamento: [CREDENCIAMENTO] ART: [ART]
