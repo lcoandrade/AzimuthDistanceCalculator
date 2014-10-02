@@ -59,13 +59,13 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
     def copyAndRenameFiles(self):
         currentPath = os.path.dirname(__file__)
         templatePath = os.path.join(currentPath, "templates")
-        simpleMemorialTemplate = os.path.join(templatePath, "template_sintetico.xml")
+        simpleMemorialTemplate = os.path.join(templatePath, "template_sintetico.html")
         fullMemorialTemplate = os.path.join(templatePath, "template_memorial.txt")
         seloTemplate = os.path.join(templatePath, "template_selo.txt")
         areaTemplate = os.path.join(templatePath, "template_area.txt")
         
         folder = self.folderEdit.text()
-        self.simpleMemorial = os.path.join(folder, "sintetico.xml")
+        self.simpleMemorial = os.path.join(folder, "sintetico.html")
         self.fullMemorial = os.path.join(folder, "analitico.txt")
         self.selo = os.path.join(folder, "selo.txt")
         self.area = os.path.join(folder, "area.txt")
@@ -86,31 +86,61 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         
         self.createSimpleMemorial()
         
-    def createCellElement(self, tempDoc, text):
-        cell = tempDoc.createElement("Cell")
-        data = tempDoc.createElement("Data")
-        cell.setAttribute("ss:StyleID", "ce1")
-        data.setAttribute("ss:Type", "String")
+    def createCellElement(self, tempDoc, text, colspan, rowspan):
+        td = tempDoc.createElement("td")
+        p = tempDoc.createElement("p")
+        span = tempDoc.createElement("span")
+
+        if colspan > 0:
+            td.setAttribute("colspan", colspan)
+        if rowspan > 0:
+            td.setAttribute("rowspan", rowspan)
+        td.setAttribute("style", "border-color : #000000 #000000 #000000 #000000; border-style: solid;")
+        p.setAttribute("style", " text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;")
+        span.setAttribute("style", " font-size: 10pt; font-family: 'Arial', 'Helvetica', sans-serif; font-style: normal; font-weight: normal; color: #000000; background-color: transparent; text-decoration: none;")
+        
         textElement = tempDoc.createTextNode(text)
-        data.appendChild(textElement)
-        cell.appendChild(data)
-        return cell
+        
+        span.appendChild(textElement)
+        p.appendChild(span)
+        td.appendChild(p)
+        
+        return td
         
     def createSimpleMemorial(self):
         tempDoc = QDomDocument()
         simple = QFile(self.simpleMemorial)
         simple.open(QIODevice.ReadOnly)
-        foi = tempDoc.setContent(simple)
+        loaded = tempDoc.setContent(simple)
         simple.close()
         
-        print foi
-        print tempDoc.toString()
+        print loaded
         
         element = tempDoc.documentElement()
          
-        nodes = element.elementsByTagName("Table")
+        nodes = element.elementsByTagName("table")
          
         table = nodes.item(0).toElement()
+
+        tr = tempDoc.createElement("tr")
+        tr.appendChild(self.createCellElement(tempDoc, "MEMORIAL DESCRITIVO SINTETICO", 7, 0))
+        table.appendChild(tr)
+        
+        tr = tempDoc.createElement("tr")
+        tr.appendChild(self.createCellElement(tempDoc, "VERTICE", 0, 2))
+        tr.appendChild(self.createCellElement(tempDoc, "COORDENADAS", 2, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "LADO", 0, 2))
+        tr.appendChild(self.createCellElement(tempDoc, "AZIMUTES", 2, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "DISTANCIA", 0, 0))
+        table.appendChild(tr)
+        
+        tr = tempDoc.createElement("tr")
+        tr.appendChild(self.createCellElement(tempDoc, "E", 0, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "N", 0, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "PLANO", 0, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "REAL", 0, 0))
+        tr.appendChild(self.createCellElement(tempDoc, "(m)", 0, 0))
+        table.appendChild(tr)
          
         convergence = float(self.convergenciaEdit.text())
              
@@ -119,30 +149,31 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
             isClosed = True
  
         for i in xrange(0,len(self.distancesAndAzimuths)):
-            lineElement = tempDoc.createElement("Row")
-            lineElement.setAttribute("ss:Height", "12.8409")
+            lineElement = tempDoc.createElement("tr")
              
             azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
             realAzimuth = self.dd2dms(self.distancesAndAzimuths[i][1] + convergence)
              
-            lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)))
+            lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i), 0, 0))
              
-            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].x())))
-            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].y())))
+            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].x()), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].y()), 0, 0))
  
             if (i == len(self.distancesAndAzimuths) - 1) and isClosed:
-                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt0"))
+                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt0", 0, 0))
             else:
-                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt"+str(i+1)))
+                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt"+str(i+1), 0, 0))
  
-            lineElement.appendChild(self.createCellElement(tempDoc, azimuth))
-            lineElement.appendChild(self.createCellElement(tempDoc, realAzimuth))
+            lineElement.appendChild(self.createCellElement(tempDoc, azimuth, 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, realAzimuth, 0, 0))
             dist = "%0.2f"%(self.distancesAndAzimuths[i][0])            
-            lineElement.appendChild(self.createCellElement(tempDoc, dist))
+            lineElement.appendChild(self.createCellElement(tempDoc, dist, 0, 0))
             
             table.appendChild(lineElement)
             
-        print tempDoc.toString()
+        simple = open(self.simpleMemorial, "w")
+        simple.write(tempDoc.toString())
+        simple.close()
         
     def createArea(self):
         isClosed = False
