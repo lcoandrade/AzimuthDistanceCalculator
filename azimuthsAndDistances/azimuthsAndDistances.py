@@ -21,9 +21,6 @@ from ui_azimuthsAndDistances import Ui_Dialog
 
 import memorialGenerator
 
-import shapely.wkb
-import shapely.geometry
-
 class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
     """Class that calculates azimuths and distances among vertexes in a linestring.
     """
@@ -50,7 +47,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         
         self.lineEdit.setInputMask("#00.00000")
         
-    def clockWise(self, points):
+    def setClockWiseRotation(self, points):
         n = len(points)
         count = 0
         for i in xrange(n):
@@ -68,28 +65,18 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
 
         return points
     
-    def setFirstPointToNorth(self, geometry):
-        oldShapelyGeom = shapely.wkb.loads(geometry.asWkb())
-        
-        yMax = oldShapelyGeom.bounds[3]
-        coords = list(oldShapelyGeom.exterior.coords)
-        if coords[0][1] == yMax:
-            return geometry
+    def setFirstPointToNorth(self, coords, yMax):
+        if coords[0].y() == yMax:
+            return coords
         
         coords.pop()
         firstPart = []
         for i in range(len(coords)):
             firstPart.append(coords[i])
-            if coords[i][1] == yMax:
+            if coords[i].y() == yMax:
                 break
             
-        polygon = shapely.geometry.Polygon(coords[i:] + firstPart)
-        newWkb = shapely.wkb.dumps(polygon)
-        newGeom = QgsGeometry()
-        newGeom.fromWkb(newWkb)
-        print newGeom.asPolygon()[0]
-        
-        return newGeom
+        return coords[i:] + firstPart
 
     def saveFiles(self):
         if (not self.distancesAndAzimuths) or (not self.points):
@@ -112,9 +99,13 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
 
         if self.geom.type() == QGis.Line:
             self.points = self.geom.asPolyline()
+            if self.points[0].y() < self.points[-1].y():
+                self.points = self.points[::-1]
             return True
         elif self.geom.type() == QGis.Polygon:
-            self.points = self.geom.asPolygon()[0]
+            points = self.setClockWiseRotation(self.geom.asPolygon()[0])
+            yMax = self.geom.boundingBox().yMaximum()
+            self.points = self.setFirstPointToNorth(points, yMax)
             return True            
         else:
             QMessageBox.information(self.iface.mainWindow(), "Warning!", "The selected geometry should be a Line or a Polygon.")
