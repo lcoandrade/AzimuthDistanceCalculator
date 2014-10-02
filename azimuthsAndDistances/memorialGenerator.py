@@ -123,15 +123,15 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         table = nodes.item(0).toElement()
 
         tr = tempDoc.createElement("tr")
-        tr.appendChild(self.createCellElement(tempDoc, "MEMORIAL DESCRITIVO SINTETICO", 7, 0))
+        tr.appendChild(self.createCellElement(tempDoc, u"MEMORIAL DESCRITIVO SINTÉTICO", 7, 0))
         table.appendChild(tr)
         
         tr = tempDoc.createElement("tr")
-        tr.appendChild(self.createCellElement(tempDoc, "VERTICE", 0, 2))
+        tr.appendChild(self.createCellElement(tempDoc, u"VÉRTICE", 0, 2))
         tr.appendChild(self.createCellElement(tempDoc, "COORDENADAS", 2, 0))
         tr.appendChild(self.createCellElement(tempDoc, "LADO", 0, 2))
         tr.appendChild(self.createCellElement(tempDoc, "AZIMUTES", 2, 0))
-        tr.appendChild(self.createCellElement(tempDoc, "DISTANCIA", 0, 0))
+        tr.appendChild(self.createCellElement(tempDoc, u"DISTÂNCIA", 0, 0))
         table.appendChild(tr)
         
         tr = tempDoc.createElement("tr")
