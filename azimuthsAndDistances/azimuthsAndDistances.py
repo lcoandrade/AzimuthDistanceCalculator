@@ -98,8 +98,11 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         isValid = self.isValidType()
         if isValid:
             distancesAndAzimuths = self.calculate()
-            
-        convergence = float(self.lineEdit.text())
+        try:
+            convergence = float(self.lineEdit.text())
+        except ValueError:
+            QMessageBox.information(self.iface.mainWindow(), "Warning!", "Please, insert the meridian convergence.")
+            return 
             
         isClosed = False
         if self.points[0] == self.points[len(self.points) - 1]:
