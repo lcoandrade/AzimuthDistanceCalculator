@@ -1,4 +1,4 @@
-<Composer title="Composer 3" visible="1">
+<Composer title="Composer 2" visible="1">
  <Composition snapGridTolerance="2" gridVisible="1" printResolution="300" paperWidth="1189" snapGridOffsetX="0" guidesVisible="1" snapGridResolution="15" snapGridOffsetY="0" alignmentSnap="1" snapping="1" numPages="1" paperHeight="841" alignmentSnapTolerance="2" smartGuides="1" printAsRaster="0" generateWorldFile="0">
   <symbol alpha="1" type="fill" name="">
    <layer pass="0" class="SimpleFill" locked="0">
@@ -15,66 +15,15 @@
     <prop k="width_border" v="0.26"/>
    </layer>
   </symbol>
-  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CONVENÇÕES" htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="93.887" page="1" id="convencoes" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="935.792" y="93.887" zValue="23" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="81.7139" outlineWidth="0.3" uuid="{66d9fefe-4e1b-4057-aefd-2abbd5088639}" height="6.2" itemRotation="0" frame="true" pagex="935.792">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+  <ComposerArrow startMarkerFile="" boundsBehaviourVersion="24" arrowHeadWidth="4" endMarkerFile="" outlineWidth="0.3" markerMode="1">
+   <ArrowColor alpha="255" red="0" blue="0" green="0"/>
+   <StartPoint x="933.866" y="6.84384"/>
+   <StopPoint x="933.666" y="832.938"/>
+   <ComposerItem pagey="6.63171" page="1" id="" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="933.453" y="6.63171" zValue="24" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="0.625144" outlineWidth="0" uuid="{5fa302fc-a131-428e-a55b-53542e5aaecc}" height="826.518" itemRotation="0" frame="false" pagex="933.453">
+    <FrameColor alpha="0" red="255" blue="255" green="255"/>
+    <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
    </ComposerItem>
-  </ComposerLabel>
-  <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="82.2736" sourceExpression="" file="../legenda.bmp" pictureHeight="88.5933" mapId="-1" anchorPoint="0">
-   <ComposerItem pagey="98.8043" page="1" id="legenda" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="935.506" y="98.8043" zValue="22" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82.2736" outlineWidth="0.3" uuid="{66c2f0c5-0474-4f7e-bcf1-4fa84ea03213}" height="90.1092" itemRotation="0" frame="false" pagex="935.506">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerPicture>
-  <ComposerLabel valign="32" labelText="[CM]" htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="33.4751" page="1" id="convergencia" lastValidViewScaleFactor="5.09773" positionMode="0" positionLock="false" x="980.287" y="33.4751" zValue="21" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="26.1097" outlineWidth="0.3" uuid="{ffb93db4-d064-4de3-83f3-1b0f3dc71ced}" height="6.2" itemRotation="0" frame="false" pagex="980.287">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerLabel>
-  <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="13.631" sourceExpression="" file="./nq_ng_positivo.png" pictureHeight="30.4253" mapId="-1" anchorPoint="0">
-   <ComposerItem pagey="21.3625" page="1" id="" lastValidViewScaleFactor="5.09773" positionMode="0" positionLock="false" x="968.916" y="21.3625" zValue="20" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="15" outlineWidth="0.3" uuid="{cf8dfaf7-1d05-4242-b313-8ef431122898}" height="30.4253" itemRotation="0" frame="false" pagex="968.916">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerPicture>
-  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DATUM HORIZONTAL: SIRGAS 2000&#xa;&#xa;&#x9;&#x9;ORIGEM DA QUILOMETRAGEM UTM: EQUADOR E MERIDIANO [MCF] WGr&#xa;&#xa;&#x9;&#x9;&#x9;ACRESCIDAS AS CONSTANTES 10.000Km E 500Km RESPECTIVAMENTE " htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,6,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="75" page="1" id="datum" lastValidViewScaleFactor="5.09773" positionMode="0" positionLock="false" x="935.201" y="75" zValue="19" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82.4289" outlineWidth="0.3" uuid="{1e85fae2-0a8d-4296-9fd4-5986ed74bd23}" height="15" itemRotation="0" frame="true" pagex="935.201">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerLabel>
-  <ComposerLabel valign="32" labelText="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Elipsóidicas&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Planas&#xa;Lat. =&#x9;[LAT]&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;E = [ESTE]&#xa;Long. = [LONG]&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;N = [NORTE]" htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="17.6942" page="1" id="coordenadas" lastValidViewScaleFactor="5.09773" positionMode="0" positionLock="false" x="935.201" y="17.6942" zValue="18" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82.4289" outlineWidth="0.3" uuid="{dd0b7679-2fb7-42fa-8789-567ac08bc4aa}" height="57.1558" itemRotation="0" frame="true" pagex="935.201">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerLabel>
-  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;BRASÍLIA-DF&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ESCALA APROXIMADA: 1:100.000" htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="180.905" page="1" id="" lastValidViewScaleFactor="2.31715" positionMode="0" positionLock="false" x="1020" y="180.905" zValue="17" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="146.802" outlineWidth="0.3" uuid="{4177d204-0991-4112-a132-c23706c0796b}" height="6.2" itemRotation="0" frame="true" pagex="1020">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerLabel>
-  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;PLANTA DE SITUAÇÃO" htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="174.749" page="1" id="" lastValidViewScaleFactor="2.31715" positionMode="0" positionLock="false" x="1020" y="174.749" zValue="16" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="146.942" outlineWidth="0.3" uuid="{ecf960a1-32d9-40ed-8627-5c671f749893}" height="6.2" itemRotation="0" frame="true" pagex="1020">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerLabel>
+  </ComposerArrow>
   <ComposerMap mapRotation="0" keepLayerSet="false" overviewFrameMap="-1" id="1" previewMode="Cache" drawCanvasItems="true">
    <overviewFrame overviewBlendMode="0" overviewFrameMap="-1" overviewCentered="false" overviewInverted="false">
     <symbol alpha="0.3" type="fill" name="">
@@ -93,7 +42,7 @@
      </layer>
     </symbol>
    </overviewFrame>
-   <Extent ymin="181.30414727543467279" xmin="-1644.37254066893387972" ymax="1079.67886925248694752" xmax="-801.18807464951612474"/>
+   <Extent ymin="8254622.64468941744416952" xmin="181441.91616616267128848" ymax="8257179.87674371059983969" xmax="183846.89813730350579135"/>
    <LayerSet/>
    <Grid gridStyle="0" crossLength="3" gridFramePenThickness="0.5" intervalX="200" offsetX="0" intervalY="200" offsetY="0" gridFrameStyle="0" gridFrameWidth="2" gridBlendMode="0" show="1">
     <framePenColor alpha="255" red="0" blue="0" green="0"/>
@@ -123,15 +72,75 @@
     </Annotation>
    </Grid>
    <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-   <ComposerItem pagey="17.7202" page="1" id="situacao" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="1020.15" y="17.7202" zValue="15" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="146.85" outlineWidth="0.3" uuid="{3864386e-b478-4f56-9ec6-decad5ee9933}" height="156.462" itemRotation="0" frame="true" pagex="1020.15">
+   <ComposerItem pagey="12.1816" page="1" id="situacao" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="1027.88" y="12.1816" zValue="23" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="147" outlineWidth="0.3" uuid="{04dda515-ae13-4c2a-865c-2b7eb453b009}" height="156.306" itemRotation="0" frame="true" pagex="1027.88">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerMap>
+  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CONVENÇÕES" htmlState="0" halign="1" margin="1">
+   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+   <FontColor red="0" blue="0" green="0"/>
+   <ComposerItem pagey="87.587" page="1" id="convencoes" lastValidViewScaleFactor="3.57344" positionMode="0" positionLock="false" x="939.287" y="87.587" zValue="22" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82" outlineWidth="0.3" uuid="{934f53ee-45f2-4290-908a-08a8a8761a1a}" height="6" itemRotation="0" frame="true" pagex="939.287">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerLabel>
+  <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="82.2736" sourceExpression="" file="C:/Documents and Settings/Luiz Claudio/Meus documentos/Downloads/testando/legenda.bmp" pictureHeight="88.5933" mapId="-1" anchorPoint="0">
+   <ComposerItem pagey="93.737" page="1" id="legenda" lastValidViewScaleFactor="3.57344" positionMode="0" positionLock="false" x="939.331" y="93.737" zValue="21" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82.2736" outlineWidth="0.3" uuid="{699a3b5d-8127-4b72-b8d6-998d3e37e77c}" height="90.1092" itemRotation="0" frame="false" pagex="939.331">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerPicture>
+  <ComposerLabel valign="32" labelText="[CM]" htmlState="0" halign="1" margin="1">
+   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+   <FontColor red="0" blue="0" green="0"/>
+   <ComposerItem pagey="33.4751" page="1" id="convergencia" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="980.287" y="33.4751" zValue="20" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="26.1097" outlineWidth="0.3" uuid="{635f05b5-abda-4ef4-b4d9-1c85f60f37ee}" height="6.2" itemRotation="0" frame="false" pagex="980.287">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerLabel>
+  <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="13.631" sourceExpression="" file="C:/Documents and Settings/Luiz Claudio/Meus documentos/Downloads/testando/nq_ng_negativo.png" pictureHeight="30.4253" mapId="-1" anchorPoint="0">
+   <ComposerItem pagey="15" page="1" id="" lastValidViewScaleFactor="7.14689" positionMode="0" positionLock="false" x="970.549" y="15" zValue="19" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="15" outlineWidth="0.3" uuid="{92a527fc-9f3a-47a5-8b11-3289c30e3457}" height="30.4253" itemRotation="0" frame="false" pagex="970.549">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerPicture>
+  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DATUM HORIZONTAL: SIRGAS 2000&#xa;&#xa;&#x9;&#x9;ORIGEM DA QUILOMETRAGEM UTM: EQUADOR E MERIDIANO [MCF] WGr&#xa;&#xa;&#x9;&#x9;&#x9;ACRESCIDAS AS CONSTANTES 10.000Km E 500Km RESPECTIVAMENTE " htmlState="0" halign="1" margin="1">
+   <LabelFont description="MS Shell Dlg 2,6,-1,5,75,0,0,0,0,0"/>
+   <FontColor red="0" blue="0" green="0"/>
+   <ComposerItem pagey="69.4874" page="1" id="datum" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="939.353" y="69.4874" zValue="18" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82" outlineWidth="0.3" uuid="{a2f14276-ce9d-4c13-ad2d-40f8ba10cd58}" height="15" itemRotation="0" frame="true" pagex="939.353">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerLabel>
+  <ComposerLabel valign="32" labelText="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Elipsóidicas&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Planas&#xa;Lat. =&#x9;[LAT]&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;E = [ESTE]&#xa;Long. = [LONG]&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;N = [NORTE]" htmlState="0" halign="1" margin="1">
+   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+   <FontColor red="0" blue="0" green="0"/>
+   <ComposerItem pagey="12.1816" page="1" id="coordenadas" lastValidViewScaleFactor="7.14689" positionMode="0" positionLock="false" x="939.353" y="12.1816" zValue="17" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="82" outlineWidth="0.3" uuid="{ce800749-fc6d-4bc3-ae3e-a8ed0dc332b2}" height="57.1558" itemRotation="0" frame="true" pagex="939.353">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerLabel>
+  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;BRASÍLIA-DF&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ESCALA APROXIMADA: 1:100.000" htmlState="0" halign="1" margin="1">
+   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+   <FontColor red="0" blue="0" green="0"/>
+   <ComposerItem pagey="175.392" page="1" id="" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="1027.88" y="175.392" zValue="16" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="147" outlineWidth="0.3" uuid="{e4e7e415-d1d8-4ad9-ab19-215ad4b6d937}" height="6.2" itemRotation="0" frame="true" pagex="1027.88">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerLabel>
+  <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;PLANTA DE SITUAÇÃO" htmlState="0" halign="1" margin="1">
+   <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
+   <FontColor red="0" blue="0" green="0"/>
+   <ComposerItem pagey="169.236" page="1" id="" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="1027.88" y="169.236" zValue="15" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="147" outlineWidth="0.3" uuid="{a41c5523-eb5e-4448-b16f-fb1ca77df1f5}" height="6.2" itemRotation="0" frame="true" pagex="1027.88">
+    <FrameColor alpha="255" red="0" blue="0" green="0"/>
+    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+   </ComposerItem>
+  </ComposerLabel>
   <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;LEVANTAMENTO E DESENHO EXECUTADO PELO&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;MINISTÉRIO DA DEFESA&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;EXÉRCITO BRASILEIRO&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DEPARTAMENTO DE CIÊNCIA E TECNOLOGIA&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DIRETORIA DE SERVIÇO GEOGRÁFICO&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;[OMDS]&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="233.5" page="1" id="executante" lastValidViewScaleFactor="3.57344" positionMode="0" positionLock="false" x="945" y="233.5" zValue="14" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="214" outlineWidth="0.3" uuid="{2156842c-7bb8-4196-a47c-468ebe278286}" height="35" itemRotation="0" frame="true" pagex="945">
+   <ComposerItem pagey="233.5" page="1" id="executante" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="951" y="233.5" zValue="14" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="214" outlineWidth="0.3" uuid="{ee53fbf4-8051-4ac1-831f-bc0befbcb88b}" height="35" itemRotation="0" frame="true" pagex="951">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -139,7 +148,7 @@
   <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;MINISTÉRIO DA DEFESA&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;EXÉRCITO BRASILEIRO&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;[RM]&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;[SPR]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="194.009" page="1" id="solicitante" lastValidViewScaleFactor="3.57344" positionMode="0" positionLock="false" x="945" y="194.009" zValue="13" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="214" outlineWidth="0.3" uuid="{cb04c1bd-e53e-4a52-8beb-73480cf01bf0}" height="35" itemRotation="0" frame="true" pagex="945">
+   <ComposerItem pagey="194.009" page="1" id="solicitante" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="951" y="194.009" zValue="13" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="214" outlineWidth="0.3" uuid="{c99c1c7a-d474-4978-9fb3-7a14f4e7f6b5}" height="35" itemRotation="0" frame="true" pagex="951">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -147,7 +156,7 @@
   <ComposerLabel valign="32" labelText="&#xa;&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;ASSINATURAS&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;__________________________&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ch SPR/11&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;_______________________________________&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RT - JOSÉ BELTRANO - 1° TEN QEM&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ENG. CARTÓGRAFO - CREA 123.456/AP - DF" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,14,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="480.536" page="1" id="assinaturas" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="1026.87" y="480.536" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="143.279" outlineWidth="0.3" uuid="{2881993c-9b09-46cb-a6aa-b562c105e2fd}" height="187.464" itemRotation="0" frame="true" pagex="1026.87">
+   <ComposerItem pagey="480.536" page="1" id="assinaturas" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="1030.68" y="480.536" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="150.321" outlineWidth="0.3" uuid="{14971955-524a-4192-acda-5ae0e2343bfe}" height="187.464" itemRotation="0" frame="true" pagex="1030.68">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -155,7 +164,7 @@
   <ComposerLabel valign="32" labelText="&#x9;&#xa;&#x9;ART n°: [ART]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,18,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="668.15" page="1" id="" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="1027.02" y="668.15" zValue="11" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="143.839" outlineWidth="0.3" uuid="{888c2b63-5da2-44d2-b642-a420870c5f4b}" height="24.5669" itemRotation="0" frame="true" pagex="1027.02">
+   <ComposerItem pagey="668.15" page="1" id="" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="1030.68" y="668.15" zValue="11" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="150.321" outlineWidth="0.3" uuid="{b6823ceb-ab54-49fb-be82-97d1e39833a1}" height="25.1264" itemRotation="0" frame="true" pagex="1030.68">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -163,7 +172,7 @@
   <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#x9;&#x9;&#x9;&#x9;TOPÓGRAFO&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;[AUTOR]L - CREA [CREA]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="628.187" page="1" id="" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="933.553" y="628.187" zValue="10" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="93.4673" outlineWidth="0.3" uuid="{7c437c78-f947-44fe-8906-7c8bf52ebaaf}" height="65.0894" itemRotation="0" frame="true" pagex="933.553">
+   <ComposerItem pagey="628.187" page="1" id="" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="933.553" y="628.187" zValue="10" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="96.826" outlineWidth="0.3" uuid="{54c21502-0152-4a74-9bd5-64792c9ef0d7}" height="65.0894" itemRotation="0" frame="true" pagex="933.553">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -171,7 +180,7 @@
   <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;PERÍMETRO&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;[PERIMETRO] m" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="549.886" page="1" id="quadro_perimetro" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="933.553" y="549.886" zValue="9" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="94.027" outlineWidth="0.3" uuid="{f356f54f-d80b-4d2a-be85-a36f977c7e00}" height="78.0013" itemRotation="0" frame="true" pagex="933.553">
+   <ComposerItem pagey="549.886" page="1" id="quadro_perimetro" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="933.553" y="549.886" zValue="9" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="96.826" outlineWidth="0.3" uuid="{30247d17-9d28-4fe7-a16f-2116cc1ea382}" height="78.0013" itemRotation="0" frame="true" pagex="933.553">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -179,7 +188,7 @@
   <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;QUADRO DE ÁREA&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;[AREA] m2" htmlState="0" halign="1" margin="0">
    <LabelFont description="MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="480.536" page="1" id="quadro_area" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="932.994" y="480.536" zValue="8" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="94.5866" outlineWidth="0.3" uuid="{211b8e35-dabb-4b02-9867-13de464aa088}" height="69.0503" itemRotation="0" frame="true" pagex="932.994">
+   <ComposerItem pagey="480.536" page="1" id="quadro_area" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="933.553" y="480.536" zValue="8" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="96.826" outlineWidth="0.3" uuid="{e497ad51-7c92-4206-ba55-245f467b377f}" height="69.0503" itemRotation="0" frame="true" pagex="933.553">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -187,7 +196,7 @@
   <ComposerLabel valign="32" labelText="FOLHA ÚNICA" htmlState="0" halign="1" margin="5">
    <LabelFont description="MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="272.643" page="1" id="folha_count" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="1109.29" y="272.643" zValue="7" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="60.8596" outlineWidth="0.3" uuid="{3b5f87c3-f83b-4353-a26b-5f255fe25983}" height="17" itemRotation="0" frame="true" pagex="1109.29">
+   <ComposerItem pagey="272.643" page="1" id="folha_count" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="1109.29" y="272.643" zValue="7" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="71.71" outlineWidth="0.3" uuid="{b72d135a-8d6c-44f5-8c7b-f5703eab04c2}" height="17" itemRotation="0" frame="true" pagex="1109.29">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -195,7 +204,7 @@
   <ComposerLabel valign="32" labelText="PLANTA DO IMÓVEL GEORREFERENCIADO" htmlState="0" halign="1" margin="5">
    <LabelFont description="MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="272.643" page="1" id="selo_title" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="933.553" y="272.643" zValue="6" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="175.741" outlineWidth="0.3" uuid="{56389751-0ef7-422c-b703-f960c48b0fb0}" height="17" itemRotation="0" frame="true" pagex="933.553">
+   <ComposerItem pagey="272.643" page="1" id="selo_title" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="933.916" y="272.643" zValue="6" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="175.378" outlineWidth="0.3" uuid="{7fa13d1a-8d2e-4d64-b9bb-e9920ca3f765}" height="17" itemRotation="0" frame="true" pagex="933.916">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -203,7 +212,7 @@
   <ComposerLabel valign="32" labelText="IMÓVEL: CIGEx&#xa;&#xa;CADASTRO: [CADASTRO]&#xa;&#xa;PROPRIETÁRIO: [PROPRIETARIO]&#xa;&#xa;ESTADO/UF: [UF]&#xa;&#xa;MATRÍCULA: [MATRICULA]&#xa;&#xa;&#xa;&#xa;&#xa;SISTEMA DE PROJEÇÃO: [PROJECAO]&#x9;&#x9;FATOR DE ESCALA: [KAPPA]&#xa;&#xa;SISTEMA GEODÉSICO DE REFERÊNCIA: [DATUM]&#xa;" htmlState="0" halign="1" margin="10">
    <LabelFont description="MS Shell Dlg 2,18,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="289.943" page="1" id="selo" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="933.916" y="289.943" zValue="5" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="237.306" outlineWidth="0.3" uuid="{2a5dc957-56c5-4c42-96da-b421bd6bca4e}" height="190.293" itemRotation="0" frame="true" pagex="933.916">
+   <ComposerItem pagey="289.943" page="1" id="selo" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="933.916" y="289.943" zValue="5" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="247.084" outlineWidth="0.3" uuid="{083fc33c-62cd-45d4-80f4-a3eae085185c}" height="190.293" itemRotation="0" frame="true" pagex="933.916">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -211,7 +220,7 @@
   <ComposerLabel valign="32" labelText="CREA:&#xa;" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,24,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="702.09" page="1" id="crea" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="945" y="702.09" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="212.427" outlineWidth="0.3" uuid="{b0f4c335-fbd5-41d3-8b55-f57b38009a3f}" height="109.452" itemRotation="0" frame="true" pagex="945">
+   <ComposerItem pagey="702.09" page="1" id="crea" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="945.15" y="702.09" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="221.85" outlineWidth="0.3" uuid="{9b94eed9-731d-49ae-b6fd-88fcbfa9dd09}" height="116.168" itemRotation="0" frame="true" pagex="945.15">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -234,7 +243,7 @@
      </layer>
     </symbol>
    </overviewFrame>
-   <Extent ymin="8255334.95774762704968452" xmin="182046.36747791527886875" ymax="8256394.51359968911856413" xmax="183248.8584634855214972"/>
+   <Extent ymin="8255426.31553910486400127" xmin="182062.50700923425029032" ymax="8256501.65423167869448662" xmax="183264.99799480449291877"/>
    <LayerSet/>
    <Grid gridStyle="0" crossLength="3" gridFramePenThickness="0.5" intervalX="200" offsetX="0" intervalY="200" offsetY="0" gridFrameStyle="0" gridFrameWidth="2" gridBlendMode="0" show="1">
     <framePenColor alpha="255" red="0" blue="0" green="0"/>
@@ -264,20 +273,11 @@
     </Annotation>
    </Grid>
    <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-   <ComposerItem pagey="15" page="1" id="planta" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="15" y="15" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="917" outlineWidth="0.3" uuid="{fc5e2163-0cdb-48ad-bcee-778d38820e91}" height="808" itemRotation="0" frame="false" pagex="15">
+   <ComposerItem pagey="7.54961" page="1" id="planta" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="7.55968" y="7.54961" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="922.44" outlineWidth="0.3" uuid="{8d4ffce8-2474-4fe2-9384-2b83c84fd5ef}" height="824.901" itemRotation="0" frame="false" pagex="7.55968">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerMap>
-  <ComposerArrow startMarkerFile="" boundsBehaviourVersion="24" arrowHeadWidth="4" endMarkerFile="" outlineWidth="0.3" markerMode="1">
-   <ArrowColor alpha="255" red="0" blue="0" green="0"/>
-   <StartPoint x="933.553" y="15"/>
-   <StopPoint x="933.553" y="825"/>
-   <ComposerItem pagey="14.7879" page="1" id="" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="true" x="933.341" y="14.7879" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="0.424264" outlineWidth="0" uuid="{0a27ea2b-71f2-463a-9784-cc6d640d4014}" height="810.424" itemRotation="0" frame="false" pagex="933.341">
-    <FrameColor alpha="0" red="255" blue="255" green="255"/>
-    <BackgroundColor alpha="0" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerArrow>
   <ComposerShape shapeType="1" cornerRadius="0">
    <symbol alpha="1" type="fill" name="">
     <layer pass="0" class="SimpleFill" locked="0">
@@ -294,14 +294,14 @@
      <prop k="width_border" v="0.3"/>
     </layer>
    </symbol>
-   <ComposerItem pagey="33.6251" page="1" id="frame" lastValidViewScaleFactor="7.14689" positionMode="0" positionLock="false" x="-37.4603" y="33.6251" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="1155.86" outlineWidth="0.3" uuid="{e68f51f2-b924-4122-bb0c-136a42ed732d}" height="809.975" itemRotation="0" frame="false" pagex="-37.4603">
+   <ComposerItem pagey="7" page="1" id="frame" lastValidViewScaleFactor="1.78672" positionMode="0" positionLock="false" x="7" y="7" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="1174" outlineWidth="0.3" uuid="{f9532b2c-0c3b-446c-bd2d-4a7fbd39b0db}" height="826" itemRotation="0" frame="false" pagex="7">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerShape>
   <ComposerHtml maxBreakDistance="10" resizeMode="0" url="file:///C:/Documents and Settings/Luiz Claudio/Meus documentos/Downloads/testando/sintetico.html" useSmartBreaks="true">
    <ComposerFrame sectionWidth="141.468" sectionHeight="131.76" sectionX="0" sectionY="0">
-    <ComposerItem pagey="51.7878" page="1" id="memorial" lastValidViewScaleFactor="0.893361" positionMode="0" positionLock="false" x="713.729" y="51.7878" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="141.468" outlineWidth="0.3" uuid="{ddfb019b-0c49-482f-8bc8-457c5521715b}" height="134.324" itemRotation="0" frame="false" pagex="713.729">
+    <ComposerItem pagey="51.7878" page="1" id="memorial" lastValidViewScaleFactor="3.57344" positionMode="0" positionLock="false" x="713.729" y="51.7878" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="141.468" outlineWidth="0.3" uuid="{e425d88e-c41a-41e5-84b3-ec91cbbbe666}" height="134.324" itemRotation="0" frame="false" pagex="713.729">
      <FrameColor alpha="255" red="0" blue="0" green="0"/>
      <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
     </ComposerItem>
