@@ -79,13 +79,13 @@
   <ComposerLabel valign="128" labelText="CONVENÇÕES" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="77.482" page="1" id="convencoes" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="654.075" y="77.482" zValue="21" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62" outlineWidth="0.3" uuid="{f70a0a4d-cea5-45a9-ba65-3bce04eeb07c}" height="5" itemRotation="0" frame="true" pagex="654.075">
+   <ComposerItem pagey="76.482" page="1" id="convencoes" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="654.075" y="76.482" zValue="21" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62" outlineWidth="0.3" uuid="{f70a0a4d-cea5-45a9-ba65-3bce04eeb07c}" height="6" itemRotation="0" frame="true" pagex="654.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerLabel>
-  <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="61.2919" sourceExpression="" file="./legenda.bmp" pictureHeight="66" mapId="-1" anchorPoint="0">
-   <ComposerItem pagey="82.632" page="1" id="legenda" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="653.925" y="82.632" zValue="20" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62.3" outlineWidth="0.3" uuid="{37ef0ee8-130f-4997-9e97-a72eb6d782b0}" height="66" itemRotation="0" frame="false" pagex="653.925">
+  <ComposerPicture useExpression="false" resizeMode="1" pictureRotation="0" pictureWidth="62.3" sourceExpression="" file="./legenda.bmp" pictureHeight="66" mapId="-1" anchorPoint="0">
+   <ComposerItem pagey="82.632" page="1" id="legenda" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="653.925" y="82.632" zValue="20" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62.3" outlineWidth="0.3" uuid="{37ef0ee8-130f-4997-9e97-a72eb6d782b0}" height="66" itemRotation="0" frame="false" pagex="653.925">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -156,14 +156,6 @@
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
    <ComposerItem pagey="356.679" page="1" id="assinaturas" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="725.375" y="356.679" zValue="11" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="99.131" outlineWidth="0.3" uuid="{bcc4f0e1-aa82-4a1c-a84b-f192d8332b34}" height="124" itemRotation="0" frame="true" pagex="725.375">
-    <FrameColor alpha="255" red="0" blue="0" green="0"/>
-    <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
-   </ComposerItem>
-  </ComposerLabel>
-  <ComposerLabel valign="32" labelText="&#x9;&#xa;&#x9;ART n°: [ART]" htmlState="0" halign="1" margin="1">
-   <LabelFont description="MS Shell Dlg 2,18,-1,5,75,0,0,0,0,0"/>
-   <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="459.264" page="1" id="art" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="747.086" y="459.264" zValue="10" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="52.6033" outlineWidth="0.3" uuid="{075f0239-33a0-4515-a5a7-62e17eefc5b6}" height="9.23546" itemRotation="0" frame="true" pagex="747.086">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -293,7 +285,7 @@
      <prop k="width_border" v="0.3"/>
     </layer>
    </symbol>
-   <ComposerItem pagey="15.2667" page="1" id="" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="651.075" y="15.2667" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="173.431" outlineWidth="0.3" uuid="{782f9156-aafe-4c9e-80ad-ae36eef7c7aa}" height="563.108" itemRotation="0" frame="false" pagex="651.075">
+   <ComposerItem pagey="15.2667" page="1" id="" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="651.075" y="15.2667" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="173.431" outlineWidth="0.3" uuid="{782f9156-aafe-4c9e-80ad-ae36eef7c7aa}" height="563.108" itemRotation="0" frame="false" pagex="651.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
