@@ -1,77 +1,107 @@
-<Composer title="Composer 3" visible="1">
- <Composition snapGridTolerance="2" gridVisible="1" printResolution="300" paperWidth="841" snapGridOffsetX="0" guidesVisible="1" snapGridResolution="15" snapGridOffsetY="0" alignmentSnap="1" snapping="1" numPages="1" paperHeight="594" alignmentSnapTolerance="2" smartGuides="1" printAsRaster="0" generateWorldFile="0">
+<Composer title="Composer 1" visible="1">
+ <Composition gridVisible="0" printResolution="300" paperWidth="841" snapGridOffsetX="0" guidesVisible="1" snapGridResolution="10" snapGridOffsetY="0" alignmentSnap="1" snapping="0" snapTolerancePixels="5" numPages="1" paperHeight="594" smartGuides="1" printAsRaster="0" generateWorldFile="0">
   <symbol alpha="1" type="fill" name="">
    <layer pass="0" class="SimpleFill" locked="0">
     <prop k="border_width_map_unit_scale" v="0,0"/>
-    <prop k="border_width_unit" v="MM"/>
     <prop k="color" v="255,255,255,255"/>
-    <prop k="color_border" v="0,0,0,255"/>
     <prop k="joinstyle" v="miter"/>
     <prop k="offset" v="0,0"/>
     <prop k="offset_map_unit_scale" v="0,0"/>
     <prop k="offset_unit" v="MM"/>
+    <prop k="outline_color" v="0,0,0,255"/>
+    <prop k="outline_style" v="no"/>
+    <prop k="outline_width" v="0.26"/>
+    <prop k="outline_width_unit" v="MM"/>
     <prop k="style" v="solid"/>
-    <prop k="style_border" v="no"/>
-    <prop k="width_border" v="0.26"/>
    </layer>
   </symbol>
   <ComposerLabel valign="128" labelText="ART n°: [ART]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="480.829" page="1" id="art" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="725.082" y="480.829" zValue="24" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="99.0771" outlineWidth="0.3" uuid="{90c00449-0785-4e36-a1c7-8e4fc20ee1e4}" height="23.45" itemRotation="0" frame="true" pagex="725.082">
+   <ComposerItem pagey="470.585" page="1" id="art" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="724.998" y="470.585" visibility="1" zValue="24" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="99.5081" outlineWidth="0.3" excludeFromExports="0" uuid="{d9d3276a-e35d-4be7-8f1f-0845c37b2ee2}" height="23.45" itemRotation="0" frame="true" pagex="724.998">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerLabel>
-  <ComposerMap mapRotation="0" keepLayerSet="false" overviewFrameMap="-1" id="1" previewMode="Cache" drawCanvasItems="true">
-   <overviewFrame overviewBlendMode="0" overviewFrameMap="-1" overviewCentered="false" overviewInverted="false">
+  <ComposerMap mapRotation="0" keepLayerSet="false" id="1" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="-1801300.64988011214882135" xmin="2126559.18071355810388923" ymax="-1800257.11823774222284555" xmax="2127537.49162827944383025"/>
+   <LayerSet/>
+   <Grid/>
+   <ComposerMapGrid leftAnnotationDirection="0" annotationFont="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" gridFramePenThickness="0.5" showAnnotation="1" bottomAnnotationDirection="0" bottomAnnotationPosition="0" name="Grid 1" gridStyle="0" intervalX="0.002" intervalY="0.002" gridFrameStyle="0" rightAnnotationPosition="2" topAnnotationDirection="0" leftAnnotationPosition="0" blendMode="0" show="1" frameFillColor1="255,255,255,255" gridFrameWidth="2" frameFillColor2="0,0,0,255" annotationFontColor="0,0,0,255" gridFrameSideFlags="15" gridFramePenColor="0,0,0,255" offsetX="0.002" annotationPrecision="0" offsetY="0.002" frameAnnotationDistance="1" unit="0" uuid="{b5396350-a93a-404b-8733-019e5d2c3596}" topAnnotationPosition="2" rightAnnotationDirection="0" annotationFormat="4" crossLength="3">
+    <lineStyle>
+     <symbol alpha="1" type="line" name="">
+      <layer pass="0" class="SimpleLine" locked="0">
+       <prop k="capstyle" v="flat"/>
+       <prop k="customdash" v="5;2"/>
+       <prop k="customdash_map_unit_scale" v="0,0"/>
+       <prop k="customdash_unit" v="MM"/>
+       <prop k="draw_inside_polygon" v="0"/>
+       <prop k="joinstyle" v="bevel"/>
+       <prop k="line_color" v="0,0,0,255"/>
+       <prop k="line_style" v="solid"/>
+       <prop k="line_width" v="0.3"/>
+       <prop k="line_width_unit" v="MM"/>
+       <prop k="offset" v="0"/>
+       <prop k="offset_map_unit_scale" v="0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="use_custom_dash" v="0"/>
+       <prop k="width_map_unit_scale" v="0,0"/>
+      </layer>
+     </symbol>
+    </lineStyle>
+    <markerStyle>
+     <symbol alpha="1" type="marker" name="">
+      <layer pass="0" class="SimpleMarker" locked="0">
+       <prop k="angle" v="0"/>
+       <prop k="color" v="0,0,0,255"/>
+       <prop k="horizontal_anchor_point" v="1"/>
+       <prop k="name" v="circle"/>
+       <prop k="offset" v="0,0"/>
+       <prop k="offset_map_unit_scale" v="0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="outline_color" v="0,0,0,255"/>
+       <prop k="outline_style" v="solid"/>
+       <prop k="outline_width" v="0"/>
+       <prop k="outline_width_map_unit_scale" v="0,0"/>
+       <prop k="outline_width_unit" v="MM"/>
+       <prop k="scale_method" v="area"/>
+       <prop k="size" v="2"/>
+       <prop k="size_map_unit_scale" v="0,0"/>
+       <prop k="size_unit" v="MM"/>
+       <prop k="vertical_anchor_point" v="1"/>
+      </layer>
+     </symbol>
+    </markerStyle>
+    <spatialrefsys>
+     <proj4>+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs</proj4>
+     <srsid>3517</srsid>
+     <srid>4674</srid>
+     <authid>EPSG:4674</authid>
+     <description>SIRGAS 2000</description>
+     <projectionacronym>longlat</projectionacronym>
+     <ellipsoidacronym>GRS80</ellipsoidacronym>
+     <geographicflag>true</geographicflag>
+    </spatialrefsys>
+   </ComposerMapGrid>
+   <ComposerMapOverview frameMap="-1" centered="0" inverted="0" uuid="{96a01714-2a79-4cda-980d-a81b1ad5c0b5}" name="Overview 1" show="1" blendMode="0">
     <symbol alpha="0.3" type="fill" name="">
      <layer pass="0" class="SimpleFill" locked="0">
       <prop k="border_width_map_unit_scale" v="0,0"/>
-      <prop k="border_width_unit" v="MM"/>
       <prop k="color" v="255,0,0,255"/>
-      <prop k="color_border" v="0,0,0,255"/>
       <prop k="joinstyle" v="bevel"/>
       <prop k="offset" v="0,0"/>
       <prop k="offset_map_unit_scale" v="0,0"/>
       <prop k="offset_unit" v="MM"/>
+      <prop k="outline_color" v="0,0,0,255"/>
+      <prop k="outline_style" v="no"/>
+      <prop k="outline_width" v="0.26"/>
+      <prop k="outline_width_unit" v="MM"/>
       <prop k="style" v="solid"/>
-      <prop k="style_border" v="no"/>
-      <prop k="width_border" v="0.26"/>
      </layer>
     </symbol>
-   </overviewFrame>
-   <Extent ymin="8254736.87648074608296156" xmin="181471.76425307814497501" ymax="8257302.19058329612016678" xmax="183876.74622421897947788"/>
-   <LayerSet/>
-   <Grid gridStyle="0" crossLength="3" gridFramePenThickness="0.5" intervalX="200" offsetX="0" intervalY="200" offsetY="0" gridFrameStyle="0" gridFrameWidth="2" gridBlendMode="0" show="1">
-    <framePenColor alpha="255" red="0" blue="0" green="0"/>
-    <frameFillColor1 alpha="255" red="255" blue="255" green="255"/>
-    <frameFillColor2 alpha="255" red="0" blue="0" green="0"/>
-    <symbol alpha="1" type="line" name="">
-     <layer pass="0" class="SimpleLine" locked="0">
-      <prop k="capstyle" v="flat"/>
-      <prop k="color" v="0,0,0,255"/>
-      <prop k="customdash" v="5;2"/>
-      <prop k="customdash_map_unit_scale" v="0,0"/>
-      <prop k="customdash_unit" v="MM"/>
-      <prop k="draw_inside_polygon" v="0"/>
-      <prop k="joinstyle" v="bevel"/>
-      <prop k="offset" v="0"/>
-      <prop k="offset_map_unit_scale" v="0,0"/>
-      <prop k="offset_unit" v="MM"/>
-      <prop k="penstyle" v="solid"/>
-      <prop k="use_custom_dash" v="0"/>
-      <prop k="width" v="0.3"/>
-      <prop k="width_map_unit_scale" v="0,0"/>
-      <prop k="width_unit" v="MM"/>
-     </layer>
-    </symbol>
-    <Annotation rightDirection="0" bottomDirection="0" format="0" topPosition="2" precision="0" leftDirection="0" rightPosition="2" bottomPosition="0" frameDistance="1" show="1" font="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" leftPosition="0" topDirection="0">
-     <fontColor alpha="255" red="0" blue="0" green="0"/>
-    </Annotation>
-   </Grid>
+   </ComposerMapOverview>
    <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-   <ComposerItem pagey="17.8889" page="1" id="situacao" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="717.423" y="17.8889" zValue="22" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="105" outlineWidth="0.3" uuid="{d3b6df2c-da35-4e37-94f1-9a6ee13f6d44}" height="112" itemRotation="0" frame="true" pagex="717.423">
+   <ComposerItem pagey="17.8889" page="1" id="situacao" lastValidViewScaleFactor="5.07588" positionMode="0" positionLock="false" x="717.423" y="17.8889" visibility="1" zValue="22" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="105" outlineWidth="0.3" excludeFromExports="0" uuid="{2a9bace1-5f8a-4427-85ca-4c2a332f94d3}" height="112" itemRotation="0" frame="true" pagex="717.423">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -79,35 +109,37 @@
   <ComposerLabel valign="128" labelText="CONVENÇÕES" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="76.482" page="1" id="convencoes" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="654.075" y="76.482" zValue="21" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62" outlineWidth="0.3" uuid="{f70a0a4d-cea5-45a9-ba65-3bce04eeb07c}" height="6" itemRotation="0" frame="true" pagex="654.075">
+   <ComposerItem pagey="76.482" page="1" id="convencoes" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="654.075" y="76.482" visibility="1" zValue="21" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62" outlineWidth="0.3" excludeFromExports="0" uuid="{f3455eb0-0f8c-4949-a5f9-e7c5e71752ae}" height="6" itemRotation="0" frame="true" pagex="654.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerLabel>
-  <ComposerPicture useExpression="false" resizeMode="1" pictureRotation="0" pictureWidth="62.3" sourceExpression="" file="./legenda.bmp" pictureHeight="66" mapId="-1" anchorPoint="0">
-   <ComposerItem pagey="82.632" page="1" id="legenda" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="653.925" y="82.632" zValue="20" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62.3" outlineWidth="0.3" uuid="{37ef0ee8-130f-4997-9e97-a72eb6d782b0}" height="66" itemRotation="0" frame="false" pagex="653.925">
+  <ComposerPicture resizeMode="1" pictureRotation="0" pictureWidth="62.3" file="C:/Documents and Settings/Luiz Claudio/.qgis2/python/plugins/AzimuthDistanceCalculator/azimuthsAndDistances/templates/legenda.bmp" pictureHeight="66" mapId="-1" anchorPoint="0">
+   <ComposerItem pagey="82.632" page="1" id="legenda" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="653.925" y="82.632" visibility="1" zValue="20" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="62.3" outlineWidth="0.3" excludeFromExports="0" uuid="{fa01103a-3619-40e1-843b-369be8c5474c}" height="66" itemRotation="0" frame="false" pagex="653.925">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <dataDefinedSource expr="" field="" active="false" useExpr="true"/>
    </ComposerItem>
   </ComposerPicture>
   <ComposerLabel valign="32" labelText="[CM]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="30.1167" page="1" id="convergencia" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="685.449" y="30.1167" zValue="19" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="13.9332" outlineWidth="0.3" uuid="{e97c05f2-5e56-41ea-9f87-98dcac6e3b5c}" height="6.54388" itemRotation="0" frame="false" pagex="685.449">
+   <ComposerItem pagey="30.1167" page="1" id="convergencia" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="685.449" y="30.1167" visibility="1" zValue="19" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="13.9332" outlineWidth="0.3" excludeFromExports="0" uuid="{856a125f-2571-4ec2-acf2-c2b95ece1c0a}" height="6.54388" itemRotation="0" frame="false" pagex="685.449">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerLabel>
-  <ComposerPicture useExpression="false" resizeMode="0" pictureRotation="0" pictureWidth="11.5462" sourceExpression="" file="./nq_ng_negativo.png" pictureHeight="25.7719" mapId="-1" anchorPoint="0">
-   <ComposerItem pagey="20.5026" page="1" id="" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="676.881" y="20.5026" zValue="18" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="13.5947" outlineWidth="0.3" uuid="{df734ed9-fb5b-4f05-9e6b-0301896195ba}" height="25.7719" itemRotation="0" frame="false" pagex="676.881">
+  <ComposerPicture resizeMode="0" pictureRotation="0" pictureWidth="11.5462" file="C:/Documents and Settings/Luiz Claudio/.qgis2/python/plugins/AzimuthDistanceCalculator/azimuthsAndDistances/templates/nq_ng_positivo.png" pictureHeight="25.7719" mapId="-1" anchorPoint="0">
+   <ComposerItem pagey="20.5026" page="1" id="" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="676.881" y="20.5026" visibility="1" zValue="18" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="13.5947" outlineWidth="0.3" excludeFromExports="0" uuid="{07390c57-0aab-47ae-bd4f-c8fc8b27f659}" height="25.7719" itemRotation="0" frame="false" pagex="676.881">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+    <dataDefinedSource expr="" field="" active="false" useExpr="true"/>
    </ComposerItem>
   </ComposerPicture>
   <ComposerLabel valign="32" labelText="&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DATUM HORIZONTAL: SIRGAS 2000&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ORIGEM DA QUILOMETRAGEM UTM: EQUADOR E MERIDIANO [MCF] WGr&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ACRESCIDAS AS CONSTANTES 10.000Km E 500Km RESPECTIVAMENTE " htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,4,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="60.004" page="1" id="datum" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="654.075" y="60.004" zValue="17" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="61" outlineWidth="0.3" uuid="{1e494ebe-ea88-4e64-bb17-27ebeaba9254}" height="13.7349" itemRotation="0" frame="true" pagex="654.075">
+   <ComposerItem pagey="60.004" page="1" id="datum" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="654.075" y="60.004" visibility="1" zValue="17" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="61" outlineWidth="0.3" excludeFromExports="0" uuid="{15aa9d22-145e-480f-9ac7-578299982b7a}" height="13.7349" itemRotation="0" frame="true" pagex="654.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -115,7 +147,7 @@
   <ComposerLabel valign="32" labelText="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Elipsóidicas&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Planas&#xa;Lat. =&#x9;[LAT]&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;E = [ESTE]&#xa;Long. = [LONG]&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;N = [NORTE]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,7,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="17.8889" page="1" id="coordenadas" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="654.075" y="17.8889" zValue="16" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="61" outlineWidth="0.3" uuid="{24096475-2400-4c35-92fc-50fa86818455}" height="42" itemRotation="0" frame="true" pagex="654.075">
+   <ComposerItem pagey="17.8889" page="1" id="coordenadas" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="654.075" y="17.8889" visibility="1" zValue="16" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="61" outlineWidth="0.3" excludeFromExports="0" uuid="{5883a867-87fb-427f-9ddc-c651eb8e6f63}" height="42" itemRotation="0" frame="true" pagex="654.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -123,7 +155,7 @@
   <ComposerLabel valign="128" labelText="BRASÍLIA-DF&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ESCALA APROXIMADA: 1:100.000" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="139.366" page="1" id="nome_escala" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="717.425" y="139.366" zValue="15" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="107.083" outlineWidth="0.3" uuid="{ece6690b-044d-41ed-81d1-61179cee7b58}" height="9.1163" itemRotation="0" frame="true" pagex="717.425">
+   <ComposerItem pagey="139.366" page="1" id="nome_escala" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="717.425" y="139.366" visibility="1" zValue="15" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="107.083" outlineWidth="0.3" excludeFromExports="0" uuid="{29c45e5d-6302-418b-bd61-754c33bad720}" height="9.1163" itemRotation="0" frame="true" pagex="717.425">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -131,7 +163,7 @@
   <ComposerLabel valign="128" labelText="PLANTA DE SITUAÇÃO" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="130.189" page="1" id="rodape_situacao" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="717.423" y="130.189" zValue="14" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="107.083" outlineWidth="0.3" uuid="{d1716468-97e8-4579-a023-a43462cc2be6}" height="8.87719" itemRotation="0" frame="true" pagex="717.423">
+   <ComposerItem pagey="130.189" page="1" id="rodape_situacao" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="717.423" y="130.189" visibility="1" zValue="14" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="107.083" outlineWidth="0.3" excludeFromExports="0" uuid="{3466c4c3-bf36-45a7-8025-cd5ce9684006}" height="8.87719" itemRotation="0" frame="true" pagex="717.423">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -139,7 +171,7 @@
   <ComposerLabel valign="128" labelText="LEVANTAMENTO E DESENHO EXECUTADO PELO&#xa;MINISTÉRIO DA DEFESA&#xa;DEPARTAMENTO DE CIÊNCIA E TECNOLOGIA&#xa;DIRETORIA DE SERVIÇO GEOGRÁFICO&#xa;[OMDS]&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="190.642" page="1" id="executante" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="653.295" y="190.642" zValue="13" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="169" outlineWidth="0.3" uuid="{ffedd802-b59f-4124-803c-9ecf304644a5}" height="33" itemRotation="0" frame="true" pagex="653.295">
+   <ComposerItem pagey="190.642" page="1" id="executante" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="653.295" y="190.642" visibility="1" zValue="13" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="169" outlineWidth="0.3" excludeFromExports="0" uuid="{6b8a57af-d037-4af4-85a1-55b03a2eb886}" height="33" itemRotation="0" frame="true" pagex="653.295">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -147,7 +179,7 @@
   <ComposerLabel valign="128" labelText="MINISTÉRIO DA DEFESA&#xa;EXÉRCITO BRASILEIRO&#xa;[RM]&#xa;[SPR]" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="154.937" page="1" id="solicitante" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="653.075" y="154.937" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="169" outlineWidth="0.3" uuid="{d90c8a9d-2846-4370-a09f-47c4acd9be1a}" height="32" itemRotation="0" frame="true" pagex="653.075">
+   <ComposerItem pagey="154.937" page="1" id="solicitante" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="653.075" y="154.937" visibility="1" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="169" outlineWidth="0.3" excludeFromExports="0" uuid="{ea407b29-61ff-4897-b50b-caaa65326246}" height="32" itemRotation="0" frame="true" pagex="653.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -155,7 +187,7 @@
   <ComposerLabel valign="32" labelText="&#xa;&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;ASSINATURAS&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;__________________________&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Ch SPR/11&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#x9;&#x9;&#x9;_______________________________________&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;RT - JOSÉ BELTRANO - 1° TEN QEM&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ENG. CARTÓGRAFO - CREA 123.456/AP - DF" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="356.679" page="1" id="assinaturas" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="725.375" y="356.679" zValue="11" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="99.131" outlineWidth="0.3" uuid="{bcc4f0e1-aa82-4a1c-a84b-f192d8332b34}" height="124" itemRotation="0" frame="true" pagex="725.375">
+   <ComposerItem pagey="346.435" page="1" id="assinaturas" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="724.944" y="346.435" visibility="1" zValue="11" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="99.564" outlineWidth="0.3" excludeFromExports="0" uuid="{a134dd3a-3436-479a-975d-db07ba290b22}" height="124.001" itemRotation="0" frame="true" pagex="724.944">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -163,7 +195,7 @@
   <ComposerLabel valign="128" labelText="TOPÓGRAFO&#xa;&#xa;&#xa;&#xa;[AUTOR]L - CREA [CREA]" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,14,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="447.279" page="1" id="autor" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="651.075" y="447.279" zValue="9" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="74" outlineWidth="0.3" uuid="{7f83e97c-0c21-456b-99aa-85ec7753d2e4}" height="57" itemRotation="0" frame="true" pagex="651.075">
+   <ComposerItem pagey="437.035" page="1" id="autor" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="650.644" y="437.035" visibility="1" zValue="9" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="74.0539" outlineWidth="0.3" excludeFromExports="0" uuid="{8f91d002-8a2a-4969-8af3-44af02ae6e03}" height="57" itemRotation="0" frame="true" pagex="650.644">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -171,7 +203,7 @@
   <ComposerLabel valign="128" labelText="PERÍMETRO&#xa;[PERIMETRO] m" htmlState="0" halign="4" margin="1">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="402.979" page="1" id="quadro_perimetro" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="651.075" y="402.979" zValue="8" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="74" outlineWidth="0.3" uuid="{374f71d0-cbd5-4ffe-be85-157536a8a4ae}" height="44" itemRotation="0" frame="true" pagex="651.075">
+   <ComposerItem pagey="392.735" page="1" id="quadro_perimetro" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="650.644" y="392.735" visibility="1" zValue="8" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="74" outlineWidth="0.3" excludeFromExports="0" uuid="{d4f19393-d149-483b-9679-3027f9001eed}" height="44" itemRotation="0" frame="true" pagex="650.644">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -179,7 +211,7 @@
   <ComposerLabel valign="128" labelText="QUADRO DE ÁREA&#xa;[AREA] m2" htmlState="0" halign="4" margin="0">
    <LabelFont description="MS Shell Dlg 2,10,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="356.679" page="1" id="quadro_area" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="651.075" y="356.679" zValue="7" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="74" outlineWidth="0.3" uuid="{25ccd945-a082-4fdf-807f-8ccba511bb81}" height="46" itemRotation="0" frame="true" pagex="651.075">
+   <ComposerItem pagey="346.435" page="1" id="quadro_area" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="650.644" y="346.435" visibility="1" zValue="7" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="74" outlineWidth="0.3" excludeFromExports="0" uuid="{621f5529-8f2f-4c9f-a7cf-a67195592996}" height="46" itemRotation="0" frame="true" pagex="650.644">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -187,7 +219,7 @@
   <ComposerLabel valign="32" labelText="FOLHA ÚNICA" htmlState="0" halign="1" margin="5">
    <LabelFont description="MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="234.186" page="1" id="folha_count" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="760.27" y="234.186" zValue="6" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="64.2385" outlineWidth="0.3" uuid="{bb0e3e04-8b78-4d6b-8004-45cf849ed328}" height="16.8925" itemRotation="0" frame="true" pagex="760.27">
+   <ComposerItem pagey="223.942" page="1" id="folha_count" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="760.406" y="223.942" visibility="1" zValue="6" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="64.1025" outlineWidth="0.3" excludeFromExports="0" uuid="{bd444ae9-af48-49c2-9e89-8037e75a0997}" height="16.8925" itemRotation="0" frame="true" pagex="760.406">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -195,7 +227,7 @@
   <ComposerLabel valign="32" labelText="PLANTA DO IMÓVEL GEORREFERENCIADO" htmlState="0" halign="1" margin="5">
    <LabelFont description="MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="234.186" page="1" id="selo_title" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="651.075" y="234.186" zValue="5" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="108.895" outlineWidth="0.3" uuid="{80aa1d8b-e339-454e-bb10-9abf06aa6b6c}" height="16.8925" itemRotation="0" frame="true" pagex="651.075">
+   <ComposerItem pagey="223.942" page="1" id="selo_title" lastValidViewScaleFactor="3.04348" positionMode="0" positionLock="false" x="651.075" y="223.942" visibility="1" zValue="5" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="109.031" outlineWidth="0.3" excludeFromExports="0" uuid="{bef492cd-b64c-4218-8746-9f8d94ad9658}" height="16.8925" itemRotation="0" frame="true" pagex="651.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -203,7 +235,7 @@
   <ComposerLabel valign="32" labelText="IMÓVEL: CIGEx&#xa;&#xa;CADASTRO: [CADASTRO]&#xa;&#xa;PROPRIETÁRIO: [PROPRIETARIO]&#xa;&#xa;ESTADO/UF: [UF]&#xa;&#xa;MATRÍCULA: [MATRICULA]&#xa;&#xa;&#xa;&#xa;&#xa;SISTEMA DE PROJEÇÃO: [PROJECAO]&#x9;&#x9;FATOR DE ESCALA: [KAPPA]&#xa;&#xa;SISTEMA GEODÉSICO DE REFERÊNCIA: [DATUM]&#xa;" htmlState="0" halign="1" margin="10">
    <LabelFont description="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="251.379" page="1" id="selo" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="651.075" y="251.379" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="173.431" outlineWidth="0.3" uuid="{f2f6d279-f16c-474e-b126-d74a916adefd}" height="105" itemRotation="0" frame="true" pagex="651.075">
+   <ComposerItem pagey="241.135" page="1" id="selo" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="651.075" y="241.135" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="173.433" outlineWidth="0.3" excludeFromExports="0" uuid="{95de92ce-2c90-471f-8fae-e8f5402b980c}" height="105" itemRotation="0" frame="true" pagex="651.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -211,60 +243,80 @@
   <ComposerLabel valign="32" labelText="CREA:&#xa;" htmlState="0" halign="1" margin="1">
    <LabelFont description="MS Shell Dlg 2,24,-1,5,75,0,0,0,0,0"/>
    <FontColor red="0" blue="0" green="0"/>
-   <ComposerItem pagey="508.15" page="1" id="crea" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="654.15" y="508.15" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="167" outlineWidth="0.3" uuid="{817618e3-b3b5-4e96-ab4a-bf5a4f3e8f4e}" height="66.799" itemRotation="0" frame="true" pagex="654.15">
+   <ComposerItem pagey="497.906" page="1" id="crea" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="653.635" y="497.906" visibility="1" zValue="3" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="167" outlineWidth="0.3" excludeFromExports="0" uuid="{768b9bd2-45ee-40d4-85f5-7b13d624f8b1}" height="66.799" itemRotation="0" frame="true" pagex="653.635">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerLabel>
-  <ComposerMap mapRotation="0" keepLayerSet="false" overviewFrameMap="-1" id="0" previewMode="Cache" drawCanvasItems="true">
-   <overviewFrame overviewBlendMode="0" overviewFrameMap="-1" overviewCentered="false" overviewInverted="false">
+  <ComposerMap mapRotation="0" keepLayerSet="false" id="0" previewMode="Cache" drawCanvasItems="true">
+   <Extent ymin="-1801176.75900311721488833" xmin="2126565.27769616013392806" ymax="-1800309.88126082578673959" xmax="2127543.58861088147386909"/>
+   <LayerSet/>
+   <Grid/>
+   <ComposerMapGrid leftAnnotationDirection="0" annotationFont="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0" gridFramePenThickness="0.5" showAnnotation="1" bottomAnnotationDirection="1" bottomAnnotationPosition="0" name="Grid 1" gridStyle="0" intervalX="200" intervalY="200" gridFrameStyle="0" rightAnnotationPosition="0" topAnnotationDirection="1" leftAnnotationPosition="0" blendMode="0" show="1" frameFillColor1="255,255,255,255" gridFrameWidth="2" frameFillColor2="0,0,0,255" annotationFontColor="0,0,0,255" gridFrameSideFlags="15" gridFramePenColor="0,0,0,255" offsetX="0" annotationPrecision="0" offsetY="0" frameAnnotationDistance="1" unit="0" uuid="{3718c6fb-84c2-4db2-af85-6ca6b5489578}" topAnnotationPosition="0" rightAnnotationDirection="0" annotationFormat="0" crossLength="3">
+    <lineStyle>
+     <symbol alpha="0" type="line" name="">
+      <layer pass="0" class="SimpleLine" locked="0">
+       <prop k="capstyle" v="flat"/>
+       <prop k="customdash" v="5;2"/>
+       <prop k="customdash_map_unit_scale" v="0,0"/>
+       <prop k="customdash_unit" v="MM"/>
+       <prop k="draw_inside_polygon" v="0"/>
+       <prop k="joinstyle" v="bevel"/>
+       <prop k="line_color" v="0,0,0,255"/>
+       <prop k="line_style" v="solid"/>
+       <prop k="line_width" v="0.3"/>
+       <prop k="line_width_unit" v="MM"/>
+       <prop k="offset" v="0"/>
+       <prop k="offset_map_unit_scale" v="0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="use_custom_dash" v="0"/>
+       <prop k="width_map_unit_scale" v="0,0"/>
+      </layer>
+     </symbol>
+    </lineStyle>
+    <markerStyle>
+     <symbol alpha="1" type="marker" name="">
+      <layer pass="0" class="SimpleMarker" locked="0">
+       <prop k="angle" v="0"/>
+       <prop k="color" v="0,0,0,255"/>
+       <prop k="horizontal_anchor_point" v="1"/>
+       <prop k="name" v="circle"/>
+       <prop k="offset" v="0,0"/>
+       <prop k="offset_map_unit_scale" v="0,0"/>
+       <prop k="offset_unit" v="MM"/>
+       <prop k="outline_color" v="0,0,0,255"/>
+       <prop k="outline_style" v="solid"/>
+       <prop k="outline_width" v="0"/>
+       <prop k="outline_width_map_unit_scale" v="0,0"/>
+       <prop k="outline_width_unit" v="MM"/>
+       <prop k="scale_method" v="area"/>
+       <prop k="size" v="2"/>
+       <prop k="size_map_unit_scale" v="0,0"/>
+       <prop k="size_unit" v="MM"/>
+       <prop k="vertical_anchor_point" v="1"/>
+      </layer>
+     </symbol>
+    </markerStyle>
+   </ComposerMapGrid>
+   <ComposerMapOverview frameMap="-1" centered="0" inverted="0" uuid="{5816c6e5-c862-4942-953f-415e7756b5af}" name="Overview 1" show="1" blendMode="0">
     <symbol alpha="0.3" type="fill" name="">
      <layer pass="0" class="SimpleFill" locked="0">
       <prop k="border_width_map_unit_scale" v="0,0"/>
-      <prop k="border_width_unit" v="MM"/>
       <prop k="color" v="255,0,0,255"/>
-      <prop k="color_border" v="0,0,0,255"/>
       <prop k="joinstyle" v="bevel"/>
       <prop k="offset" v="0,0"/>
       <prop k="offset_map_unit_scale" v="0,0"/>
       <prop k="offset_unit" v="MM"/>
+      <prop k="outline_color" v="0,0,0,255"/>
+      <prop k="outline_style" v="no"/>
+      <prop k="outline_width" v="0.26"/>
+      <prop k="outline_width_unit" v="MM"/>
       <prop k="style" v="solid"/>
-      <prop k="style_border" v="no"/>
-      <prop k="width_border" v="0.26"/>
      </layer>
     </symbol>
-   </overviewFrame>
-   <Extent ymin="8255335.86468982044607401" xmin="181973.84094849956454709" ymax="8256573.74130858574062586" xmax="183370.84094992448808625"/>
-   <LayerSet/>
-   <Grid gridStyle="0" crossLength="3" gridFramePenThickness="0.5" intervalX="200" offsetX="0" intervalY="200" offsetY="0" gridFrameStyle="0" gridFrameWidth="2" gridBlendMode="0" show="1">
-    <framePenColor alpha="255" red="0" blue="0" green="0"/>
-    <frameFillColor1 alpha="255" red="255" blue="255" green="255"/>
-    <frameFillColor2 alpha="255" red="0" blue="0" green="0"/>
-    <symbol alpha="0" type="line" name="">
-     <layer pass="0" class="SimpleLine" locked="0">
-      <prop k="capstyle" v="flat"/>
-      <prop k="color" v="0,0,0,255"/>
-      <prop k="customdash" v="5;2"/>
-      <prop k="customdash_map_unit_scale" v="0,0"/>
-      <prop k="customdash_unit" v="MM"/>
-      <prop k="draw_inside_polygon" v="0"/>
-      <prop k="joinstyle" v="bevel"/>
-      <prop k="offset" v="0"/>
-      <prop k="offset_map_unit_scale" v="0,0"/>
-      <prop k="offset_unit" v="MM"/>
-      <prop k="penstyle" v="solid"/>
-      <prop k="use_custom_dash" v="0"/>
-      <prop k="width" v="0.3"/>
-      <prop k="width_map_unit_scale" v="0,0"/>
-      <prop k="width_unit" v="MM"/>
-     </layer>
-    </symbol>
-    <Annotation rightDirection="0" bottomDirection="1" format="0" topPosition="0" precision="0" leftDirection="0" rightPosition="0" bottomPosition="0" frameDistance="1" show="1" font="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0" leftPosition="0" topDirection="1">
-     <fontColor alpha="255" red="0" blue="0" green="0"/>
-    </Annotation>
-   </Grid>
+   </ComposerMapOverview>
    <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-   <ComposerItem pagey="15.15" page="1" id="planta" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="15.15" y="15.15" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="635.625" outlineWidth="0.3" uuid="{efb57850-59ff-4478-b915-6581aa28c9ff}" height="563.225" itemRotation="0" frame="true" pagex="15.15">
+   <ComposerItem pagey="15.15" page="1" id="planta" lastValidViewScaleFactor="5.07588" positionMode="0" positionLock="false" x="15.15" y="15.15" visibility="1" zValue="2" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="635.625" outlineWidth="0.3" excludeFromExports="0" uuid="{651ef9fd-a772-4b45-a414-554ae10fa0c3}" height="563.225" itemRotation="0" frame="true" pagex="15.15">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
@@ -273,26 +325,26 @@
    <symbol alpha="1" type="fill" name="">
     <layer pass="0" class="SimpleFill" locked="0">
      <prop k="border_width_map_unit_scale" v="0,0"/>
-     <prop k="border_width_unit" v="MM"/>
      <prop k="color" v="255,255,255,255"/>
-     <prop k="color_border" v="0,0,0,255"/>
      <prop k="joinstyle" v="miter"/>
      <prop k="offset" v="0,0"/>
      <prop k="offset_map_unit_scale" v="0,0"/>
      <prop k="offset_unit" v="MM"/>
+     <prop k="outline_color" v="0,0,0,255"/>
+     <prop k="outline_style" v="solid"/>
+     <prop k="outline_width" v="0.3"/>
+     <prop k="outline_width_unit" v="MM"/>
      <prop k="style" v="solid"/>
-     <prop k="style_border" v="solid"/>
-     <prop k="width_border" v="0.3"/>
     </layer>
    </symbol>
-   <ComposerItem pagey="15.2667" page="1" id="" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="651.075" y="15.2667" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="173.431" outlineWidth="0.3" uuid="{782f9156-aafe-4c9e-80ad-ae36eef7c7aa}" height="563.108" itemRotation="0" frame="false" pagex="651.075">
+   <ComposerItem pagey="15.2667" page="1" id="" lastValidViewScaleFactor="6.08697" positionMode="0" positionLock="false" x="651.075" y="15.2667" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="173.431" outlineWidth="0.3" excludeFromExports="0" uuid="{25dc31a4-2aca-492d-ae71-404e81d4e577}" height="563.108" itemRotation="0" frame="false" pagex="651.075">
     <FrameColor alpha="255" red="0" blue="0" green="0"/>
     <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
    </ComposerItem>
   </ComposerShape>
-  <ComposerHtml maxBreakDistance="10" resizeMode="0" url="file:///C:/Documents and Settings/Luiz Claudio/Meus documentos/Downloads/testando/sintetico.html" useSmartBreaks="true">
-   <ComposerFrame sectionWidth="141.468" sectionHeight="131.76" sectionX="0" sectionY="0">
-    <ComposerItem pagey="56.1677" page="1" id="memorial" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="461.314" y="56.1677" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="141.468" outlineWidth="0.3" uuid="{14efeb3a-c9b9-4354-b551-de600d7a1c63}" height="134.324" itemRotation="0" frame="false" pagex="461.314">
+  <ComposerHtml maxBreakDistance="10" contentMode="0" resizeMode="0" url="file:///C:/Documents and Settings/Luiz Claudio/Meus documentos/Downloads/testando/sintetico.html" useSmartBreaks="true" evaluateExpressions="true" html="" stylesheetEnabled="false" stylesheet="">
+   <ComposerFrame sectionWidth="141.468" sectionHeight="134.324" hideBackgroundIfEmpty="0" hidePageIfEmpty="0" sectionX="0" sectionY="0">
+    <ComposerItem pagey="56.1677" page="1" id="memorial" lastValidViewScaleFactor="1.52174" positionMode="0" positionLock="false" x="461.314" y="56.1677" visibility="1" zValue="12" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="141.468" outlineWidth="0.3" excludeFromExports="0" uuid="{13042d29-1cad-401c-8629-98f505352ae0}" height="134.324" itemRotation="0" frame="false" pagex="461.314">
      <FrameColor alpha="255" red="0" blue="0" green="0"/>
      <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
     </ComposerItem>
