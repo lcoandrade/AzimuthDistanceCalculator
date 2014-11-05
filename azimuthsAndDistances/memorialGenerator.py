@@ -32,7 +32,7 @@ import time
 
 class MemorialGenerator( QDialog, Ui_Dialog ):
     
-    def __init__(self, convergence, distancesAndAzimuths, points, confrontingList, geomArea, geomPerimeter):
+    def __init__(self, convergence, tableWidget, geomArea, geomPerimeter):
         """Constructor.
         """
         QDialog.__init__( self )
@@ -46,9 +46,7 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         
         self.convergenciaEdit.setText(convergence)
         
-        self.distancesAndAzimuths = distancesAndAzimuths
-        self.points = points
-        self.confrontingList = confrontingList
+        self.tableWidget = tableWidget
         self.geomArea = geomArea
         self.geomPerimeter = geomPerimeter
         
@@ -114,8 +112,6 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         loaded = tempDoc.setContent(simple)
         simple.close()
         
-        print loaded
-        
         element = tempDoc.documentElement()
          
         nodes = element.elementsByTagName("table")
@@ -144,30 +140,21 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
          
         convergence = float(self.convergenciaEdit.text())
              
-        isClosed = False
-        if self.points[0] == self.points[len(self.points) - 1]:
-            isClosed = True
- 
-        for i in xrange(0,len(self.distancesAndAzimuths)):
+        rowCount = self.tableWidget.rowCount()
+        
+        for i in xrange(0,rowCount):
             lineElement = tempDoc.createElement("tr")
              
-            azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
-            realAzimuth = self.dd2dms(self.distancesAndAzimuths[i][1] + convergence)
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,0).text(), 0, 0))
              
-            lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i), 0, 0))
-             
-            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].x()), 0, 0))
-            lineElement.appendChild(self.createCellElement(tempDoc, str(self.points[i].y()), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,1).text(), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,2).text(), 0, 0))
  
-            if (i == len(self.distancesAndAzimuths) - 1) and isClosed:
-                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt0", 0, 0))
-            else:
-                lineElement.appendChild(self.createCellElement(tempDoc, "Pt"+str(i)+"-Pt"+str(i+1), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,3).text(), 0, 0))
  
-            lineElement.appendChild(self.createCellElement(tempDoc, azimuth, 0, 0))
-            lineElement.appendChild(self.createCellElement(tempDoc, realAzimuth, 0, 0))
-            dist = "%0.2f"%(self.distancesAndAzimuths[i][0])            
-            lineElement.appendChild(self.createCellElement(tempDoc, dist, 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,4).text(), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,5).text(), 0, 0))
+            lineElement.appendChild(self.createCellElement(tempDoc, self.tableWidget.item(i,6).text(), 0, 0))
             
             table.appendChild(lineElement)
             
@@ -176,10 +163,6 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         simple.close()
         
     def createArea(self):
-        isClosed = False
-        if self.points[0] == self.points[len(self.points) - 1]:
-            isClosed = True
-        
         area = open(self.area, "r")
         fileData = area.read()
         area.close()
@@ -202,22 +185,18 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         
         newData += "Estação    Vante    Coordenada E    Coordenada N    Az Plano    Az Real    Distância\n"
         
-        for i in xrange(0,len(self.distancesAndAzimuths) - 1):            
-            azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
-            realAzimuth = self.dd2dms(self.distancesAndAzimuths[i][1] + float(self.convergenciaEdit.text()))
-
+        rowCount = self.tableWidget.rowCount()
+        
+        for i in xrange(0,rowCount):            
             line  = str()
-            line += "Pt"+str(i)+"    "
-            if (i == len(self.distancesAndAzimuths) - 2) and isClosed:
-                line += "Pt0    "
-            else:
-                line += "Pt"+str(i+1)+"    "                
-            line += str(self.points[i].x())+"    "
-            line += str(self.points[i].y())+"    "
-            line += azimuth+"    "
-            line += realAzimuth+"    "
-            dist = "%0.2f"%(self.distancesAndAzimuths[i][0])
-            line += str(dist)+"\n"
+            side = self.tableWidget.item(i,3).text()
+            sideSplit = side.split("-")
+            line += sideSplit[0]+"    "+sideSplit[1]+"    "
+            line += self.tableWidget.item(i,1).text()+"    "
+            line += self.tableWidget.item(i,2).text()+"    "
+            line += self.tableWidget.item(i,4).text()+"    "
+            line += self.tableWidget.item(i,5).text()+"    "
+            line += self.tableWidget.item(i,6).text()+"\n"
             
             newData += line
 
@@ -271,39 +250,25 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         memorial.close()
         
     def getDescription(self):
-        isClosed = False
-        if self.points[0] == self.points[len(self.points) - 1]:
-            isClosed = True
-        
         description = str()
-        description += "Inicia-se a descrição deste perímetro no vértice Pt0, de coordenadas "
-        description += "N "+str(self.points[0].y())+" m e "
-        description += "E "+str(self.points[0].x())+" m, "
+        description += "Inicia-se a descrição deste perímetro no vértice "+self.tableWidget.item(0,0).text()+", de coordenadas "
+        description += "N "+self.tableWidget.item(0,2).text()+" m e "
+        description += "E "+self.tableWidget.item(0,1).text()+" m, "
         description += "Datum " +self.datumEdit.text()+ " com Meridiano Central " +self.meridianoEdit.text()+ ", localizado a "+self.enderecoEdit.text()+", Código INCRA " +self.codIncraEdit.text()+ "; "
-            
-        for i in xrange(0,len(self.distancesAndAzimuths)):
-            azimuth = self.dd2dms(self.distancesAndAzimuths[i][1])
 
-            description += " deste, segue confrontando com "+self.confrontingList[i]+", "
+        rowCount = self.tableWidget.rowCount()            
+        for i in xrange(0,rowCount):
+            side = self.tableWidget.item(i,3).text()
+            sideSplit = side.split("-")
+
+            description += " deste, segue confrontando com "+self.tableWidget.item(i,7).text()+", "
             description += "com os seguintes azimute plano e distância:"
-            description += azimuth+" e "
-            dist = "%0.2f"%(self.distancesAndAzimuths[i][0])
-            description += str(dist)+"; até o vértice "
-            if (i == len(self.distancesAndAzimuths) - 1) and isClosed:
-                description += "Pt0, de coordenadas "
-                description += "N "+str(self.points[0].y())+" m e "
-                description += "E "+str(self.points[0].x())+" m, encerrando esta descrição."
-                description += " Todas as coordenadas aqui descritas estão georrefereciadas ao Sistema Geodésico Brasileiro, "
-                description += "a partir da estação RBMC de "+self.rbmcOrigemEdit.text()+" de coordenadas "
-                description += "E "+self.rbmcEsteEdit.text()+" m e N "+self.rbmcNorteEdit.text()+" m, "
-                description += "localizada em "+self.localRbmcEdit.text()+", "
-                description += "e encontram-se representadas no sistema UTM, referenciadas ao Meridiano Central "+self.meridianoEdit.text()
-                description += ", tendo como DATUM "+self.datumEdit.text()+"."
-                description += "Todos os azimutes e distâncias, área e perímetro foram calculados no plano de projeção UTM."
-            elif (i == len(self.distancesAndAzimuths) - 1) and isClosed == False:
-                description += "Pt"+str(i+1)+", de coordenadas "
-                description += "N "+str(self.points[i+1].y())+" m e "
-                description += "E "+str(self.points[i+1].x())+" m, encerrando esta descrição."
+            description += self.tableWidget.item(i,4).text()+" e "
+            description += self.tableWidget.item(i,6).text()+"; até o vértice "
+            if (i == rowCount - 1):
+                description += sideSplit[1]+", de coordenadas "
+                description += "N "+self.tableWidget.item(0,2).text()+" m e "
+                description += "E "+self.tableWidget.item(0,1).text()+" m, encerrando esta descrição."
                 description += " Todas as coordenadas aqui descritas estão georrefereciadas ao Sistema Geodésico Brasileiro, "
                 description += "a partir da estação RBMC de "+self.rbmcOrigemEdit.text()+" de coordenadas "
                 description += "E "+self.rbmcEsteEdit.text()+" m e N "+self.rbmcNorteEdit.text()+" m, "
@@ -312,17 +277,8 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
                 description += ", tendo como DATUM "+self.datumEdit.text()+"."
                 description += "Todos os azimutes e distâncias, área e perímetro foram calculados no plano de projeção UTM."
             else:
-                description += "Pt"+str(i+1)+", de coordenadas "
-                description += "N "+str(self.points[i+1].y())+" m e "
-                description += "E "+str(self.points[i+1].x())+" m;"
+                description += sideSplit[1]+", de coordenadas "
+                description += "N "+self.tableWidget.item(i+1,2).text()+" m e "
+                description += "E "+self.tableWidget.item(i+1,1).text()+" m;"
                 
         return description
-                    
-    def dd2dms(self, dd):
-        dd = float(dd)
-        d = int(dd)
-        m = abs(int(60*(dd-d)))
-        s = abs((dd-d-m/60)*60)
-        dms = str(d) + u"\u00b0" + str(m).zfill(2) + "'" + "%0.2f"%(s) + "''"
-        return dms
-        
