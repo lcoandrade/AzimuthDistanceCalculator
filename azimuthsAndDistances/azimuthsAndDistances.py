@@ -87,7 +87,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
                 item = self.tableWidget.item(i, 7)
                 confrontingList.append(item.text())
                 
-            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.distancesAndAzimuths, self.points, confrontingList, self.area, self.perimeter)
+            d = memorialGenerator.MemorialGenerator(self.lineEdit.text(), self.tableWidget, self.area, self.perimeter)
             d.exec_()
         
     def isValidType(self):
