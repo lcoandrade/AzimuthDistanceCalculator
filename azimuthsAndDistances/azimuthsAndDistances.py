@@ -121,6 +121,8 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
             after = self.points[i+1]
             distance = math.sqrt(before.sqrDist(after))
             azimuth = before.azimuth(after)
+            if azimuth < 0:
+                azimuth += 360
             self.distancesAndAzimuths.append((distance, azimuth))
             self.perimeter += distance
             
