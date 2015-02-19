@@ -12,7 +12,7 @@
 name=Azimuth and Distance Calculator
 qgisMinimumVersion=2.0
 description=Calculates azimuths and distances
-version=0.8
+version=0.9
 author=Luiz Andrade
 email=luiz.claudio@dsg.eb.mil.br
 
