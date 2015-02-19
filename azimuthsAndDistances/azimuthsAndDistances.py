@@ -80,7 +80,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
 
     def saveFiles(self):
         if (not self.distancesAndAzimuths) or (not self.points):
-            QMessageBox.information(self.iface.mainWindow(), "Warning!", "Click on calculate button first to generate the needed data.")
+            QMessageBox.information(self.iface.mainWindow(), self.tr("Warning!"), self.tr("Click on calculate button first to generate the needed data."))
         else:
             confrontingList = list()
             for i in xrange(self.tableWidget.rowCount()):
@@ -94,7 +94,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         """Verifies the geometry type.
         """
         if self.geom.isMultipart():
-            QMessageBox.information(self.iface.mainWindow(), "Warning!", "The limit of a patrimonial area must be a single part geometry.")
+            QMessageBox.information(self.iface.mainWindow(), self.tr("Warning!"), self.tr("The limit of a patrimonial area must be a single part geometry."))
             return False
 
         if self.geom.type() == QGis.Line:
@@ -108,7 +108,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
             self.points = self.setFirstPointToNorth(points, yMax)
             return True            
         else:
-            QMessageBox.information(self.iface.mainWindow(), "Warning!", "The selected geometry should be a Line or a Polygon.")
+            QMessageBox.information(self.iface.mainWindow(), self.tr("Warning!"), self.tr("The selected geometry should be a Line or a Polygon."))
             return False
             
     def calculate(self):
@@ -138,7 +138,7 @@ class AzimuthsAndDistancesDialog( QDialog, Ui_Dialog ):
         try:
             convergence = float(self.lineEdit.text())
         except ValueError:
-            QMessageBox.information(self.iface.mainWindow(), "Warning!", "Please, insert the meridian convergence.")
+            QMessageBox.information(self.iface.mainWindow(), self.tr("Warning!"), self.tr("Please, insert the meridian convergence."))
             return 
             
         isClosed = False

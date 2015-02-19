@@ -61,7 +61,7 @@ class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
             d = calculateKappaAndConvergence.CalculateKappaAndConvergenceDialog(self.iface)
             d.exec_()
         else:
-            QMessageBox.warning(self.iface.mainWindow(), "Warning!", "Please, open a layer and select a line or polygon feature.")
+            QMessageBox.warning(self.iface.mainWindow(), self.tr("Warning!"), self.tr("Please, open a layer and select a line or polygon feature."))
 
     def calculateAzimuths(self):
         currentLayer = self.iface.mapCanvas().currentLayer()
@@ -72,6 +72,6 @@ class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
                 d = azimuthsAndDistances.AzimuthsAndDistancesDialog(self.iface, selectedFeature.geometry())
                 d.exec_()
             else:
-                QMessageBox.warning(self.iface.mainWindow(), "Warning!", "One and only one feature must be selected to perform the calculations.")
+                QMessageBox.warning(self.iface.mainWindow(), self.tr("Warning!"), self.tr("One and only one feature must be selected to perform the calculations."))
         else:
-            QMessageBox.warning(self.iface.mainWindow(), "Warning!", "Please, open a layer and select a line or polygon feature.")
+            QMessageBox.warning(self.iface.mainWindow(), self.tr("Warning!"), self.tr("Please, open a layer and select a line or polygon feature."))
