@@ -12,7 +12,7 @@
 name=Azimuth and Distance Calculator
 qgisMinimumVersion=2.0
 description=Calculates azimuths and distances
-version=0.9
+version=1.0
 author=Luiz Andrade
 email=luiz.claudio@dsg.eb.mil.br
 
@@ -21,10 +21,10 @@ email=luiz.claudio@dsg.eb.mil.br
 # Optional items:
 
 # Uncomment the following line and add your changelog entries:
-# changelog=
+changelog= Code improvements. Now the meridian convergence can be calculated automatically based on the centroid. Projection information is automatically in the save files dialog.
 
 # tags are comma separated with spaces allowed
-tags=
+tags=Document,UTM,Meridian,Azimuth,Patrimonial,Distance,Calculator,Factor,Convergence,Memorial,Kappa
 
 homepage=https://hub.qgis.org/projects/azimuthdistances
 tracker=https://hub.qgis.org/projects/azimuthdistances
