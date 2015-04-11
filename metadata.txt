@@ -11,7 +11,7 @@
 [general]
 name=Azimuth and Distance Calculator
 qgisMinimumVersion=2.0
-description=Calculates azimuths and distances
+description=Calculates azimuths and distances for a selected feature. The feature can be either a line or a polygon. The plugin also calculates Meridian Convergence and Kappa Factor for UTM projections to a given geographical coordinate.
 version=1.0
 author=Luiz Andrade
 email=luiz.claudio@dsg.eb.mil.br
