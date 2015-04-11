@@ -135,11 +135,11 @@ class CalculateKappaAndConvergenceDialog( QDialog, Ui_Dialog ):
         self.textEdit.append("E = "+str(utmPoint.x())+"\n")
         self.textEdit.append("Long = "+str(longitude)+"\n")
         self.textEdit.append("Lat = "+str(latitude)+"\n")
-        self.textEdit.append("UTM Zone = "+str(utmZone)+"\n")
-        self.textEdit.append("Central Meridian = "+str(centralMeridian)+"\n")
-        self.textEdit.append("Kappa = "+str(reducedKappa)+"\n")
-        self.textEdit.append("Convergence DMS = "+convergence+"\n")
-        self.textEdit.append("Convergence Decimal Degrees = "+str(c)+"\n")
+        self.textEdit.append(self.tr("UTM Zone = ")+str(utmZone)+"\n")
+        self.textEdit.append(self.tr("Central Meridian = ")+str(centralMeridian)+"\n")
+        self.textEdit.append(self.tr("Kappa = ")+str(reducedKappa)+"\n")
+        self.textEdit.append(self.tr("Convergence DMS = ")+convergence+"\n")
+        self.textEdit.append(self.tr("Convergence Decimal Degrees = ")+str(c)+"\n")
         
     def clearTextEdit(self):
         self.textEdit.clear()

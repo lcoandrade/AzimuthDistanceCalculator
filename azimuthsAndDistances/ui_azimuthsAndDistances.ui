@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>530</width>
+    <width>723</width>
     <height>338</height>
    </rect>
   </property>
@@ -48,14 +48,51 @@
     </layout>
    </item>
    <item row="2" column="0">
-    <widget class="QTextEdit" name="textEdit">
-     <property name="toolTip">
-      <string>CSV text with Point, E, N, side, Planar azimuth, Real Azimuth and Distance</string>
-     </property>
+    <widget class="QTableWidget" name="tableWidget">
+     <column>
+      <property name="text">
+       <string>Vertex</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>E</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>N</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Side</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Planar Azimuth</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Real Azimuth</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Distance</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Confronting</string>
+      </property>
+     </column>
     </widget>
    </item>
    <item row="3" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QPushButton" name="calculateButton">
        <property name="text">
@@ -71,6 +108,13 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="saveFilesButton">
+     <property name="text">
+      <string>Save Files</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

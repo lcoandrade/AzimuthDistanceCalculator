@@ -30,7 +30,6 @@ from azimuthdistancecalculatordialog import AzimuthDistanceCalculatorDialog
 import os.path
 
 class AzimuthDistanceCalculator:
-
     def __init__(self, iface):
         # Save reference to the QGIS interface
         self.iface = iface
@@ -52,23 +51,37 @@ class AzimuthDistanceCalculator:
         
         # Obtaining the map canvas
         self.canvas = iface.mapCanvas()
-        
+
+    # noinspection PyMethodMayBeStatic
+    def tr(self, message):
+        """Get the translation for a string using Qt translation API.
+
+        We implement this ourselves since we do not inherit QObject.
+
+        :param message: String for translation.
+        :type message: str, QString
+
+        :returns: Translated version of message.
+        :rtype: QString
+        """
+        # noinspection PyTypeChecker,PyArgumentList,PyCallByClass
+        return QCoreApplication.translate('azimuthdistancecalculator', message)        
 
     def initGui(self):
         # Create action that will start plugin configuration
         self.action = QAction(
             QIcon(":/plugins/azimuthdistancecalculator/north.png"),
-            u"Calculator", self.iface.mainWindow())
+            self.tr("Calculator"), self.iface.mainWindow())
         # connect the action to the run method
         self.action.triggered.connect(self.run)
 
         # Add toolbar button and menu item
         self.iface.addToolBarIcon(self.action)
-        self.iface.addPluginToMenu(u"&Azimuth and Distance Calculator", self.action)
+        self.iface.addPluginToMenu(self.tr("Azimuth and Distance Calculator"), self.action)
 
     def unload(self):
         # Remove the plugin menu item and icon
-        self.iface.removePluginMenu(u"&Azimuth and Distance Calculator", self.action)
+        self.iface.removePluginMenu(self.tr("Azimuth and Distance Calculator"), self.action)
         self.iface.removeToolBarIcon(self.action)
 
     # run method that performs all the real work
