@@ -19,25 +19,19 @@
  *                                                                         *
  ***************************************************************************/
 """
+import os
 
-from PyQt4.QtCore import *
+from PyQt4 import uic
 from PyQt4.QtGui import *
-from qgis.core import *
-from qgis.gui import *
 
-from ui_azimuthdistancecalculator import Ui_AzimuthDistanceCalculator
+FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'ui_azimuthdistancecalculator.ui'))
 
-import os.path, sys
 # Import specific modules
-# Set up current path, so that we know where to look for modules
-currentPath = os.path.dirname(__file__)
-sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/kappaAndConvergence'))
-sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/azimuthsAndDistances'))
-import calculateKappaAndConvergence
-import azimuthsAndDistances
-################################################################
+from AzimuthDistanceCalculator.kappaAndConvergence.calculateKappaAndConvergence import CalculateKappaAndConvergenceDialog
+from AzimuthDistanceCalculator.azimuthsAndDistances.azimuthsAndDistances import AzimuthsAndDistancesDialog
 
-class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
+class AzimuthDistanceCalculatorDialog(QDialog, FORM_CLASS):
     def __init__(self, iface):
         QDialog.__init__(self)
         # Set up the user interface from Designer.
@@ -50,15 +44,15 @@ class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
         self.iface = iface
         
         # Connecting SIGNAL/SLOTS for the Output button
-        QObject.connect(self.kappaAndConvergenceButton, SIGNAL("clicked()"), self.calculateKappa)
+        self.kappaAndConvergenceButton.clicked.connect(self.calculateKappa)
 
         # Connecting SIGNAL/SLOTS for the Output button
-        QObject.connect(self.azimuthsAndDistancesButton, SIGNAL("clicked()"), self.calculateAzimuths)
+        self.azimuthsAndDistancesButton.clicked.connect(self.calculateAzimuths)
 
     def calculateKappa(self):
         currentLayer = self.iface.mapCanvas().currentLayer()
         if currentLayer:
-            d = calculateKappaAndConvergence.CalculateKappaAndConvergenceDialog(self.iface)
+            d = CalculateKappaAndConvergenceDialog(self.iface)
             d.exec_()
         else:
             QMessageBox.warning(self.iface.mainWindow(), self.tr("Warning!"), self.tr("Please, open a layer and select a line or polygon feature."))
@@ -69,7 +63,7 @@ class AzimuthDistanceCalculatorDialog(QDialog, Ui_AzimuthDistanceCalculator):
             selectedFeatures = len(currentLayer.selectedFeatures())
             if selectedFeatures == 1: 
                 selectedFeature = currentLayer.selectedFeatures()[0]
-                d = azimuthsAndDistances.AzimuthsAndDistancesDialog(self.iface, selectedFeature.geometry())
+                d = AzimuthsAndDistancesDialog(self.iface, selectedFeature.geometry())
                 d.exec_()
             else:
                 QMessageBox.warning(self.iface.mainWindow(), self.tr("Warning!"), self.tr("One and only one feature must be selected to perform the calculations."))

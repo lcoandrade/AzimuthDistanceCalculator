@@ -1,25 +1,35 @@
 # -*- coding: utf-8 -*-
-#-------------------------------------------------------------------------------
-# Name:        Calculator
-# Purpose:
-#
-# Author:      Luiz Andrade - luiz.claudio@dsg.eb.mil.br
-#
-# Created:     24/09/2014
-# Copyright:   (c) luiz 2014
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
-# Import the PyQt and QGIS libraries
-from PyQt4.QtCore import *
+"""
+/***************************************************************************
+ AzimuthDistanceCalculator
+                                 A QGIS plugin
+ Calculates azimuths and distances
+                              -------------------
+        begin                : 2014-09-24
+        copyright            : (C) 2014 by Luiz Andrade
+        email                : luiz.claudio@dsg.eb.mil.br
+ ***************************************************************************/
+
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+"""
+import os
+from PyQt4 import uic
 from PyQt4.QtGui import *
 from qgis.core import *
-from qgis.gui import *
 
 import math
 
-from ui_kappaAndConvergence import Ui_Dialog
+FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'ui_kappaAndConvergence.ui'))
 
-class CalculateKappaAndConvergenceDialog( QDialog, Ui_Dialog ):
+class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
     def __init__(self, iface):
         """Constructor.
         """
@@ -29,11 +39,11 @@ class CalculateKappaAndConvergenceDialog( QDialog, Ui_Dialog ):
         self.iface = iface
         
         # Connecting SIGNAL/SLOTS for the Output button
-        QObject.connect(self.calculateButton, SIGNAL("clicked()"), self.fillTextEdit)
-        
+        self.calculateButton.clicked.connect(self.fillTextEdit)
+
         # Connecting SIGNAL/SLOTS for the Output button
-        QObject.connect(self.clearButton, SIGNAL("clicked()"), self.clearTextEdit)
-        
+        self.clearButton.clicked.connect(self.clearTextEdit)
+
         self.latEdit.setInputMask("#00.00000")
         self.longEdit.setInputMask("#000.00000")
     

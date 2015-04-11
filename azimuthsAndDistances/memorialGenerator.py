@@ -1,36 +1,41 @@
 # -*- coding: utf-8 -*-
-#-------------------------------------------------------------------------------
-# Name:        Memorial Generator
-# Purpose:
-#
-# Author:      Luiz Andrade - luiz.claudio@dsg.eb.mil.br
-#
-# Created:     30/09/2014
-# Copyright:   (c) luiz 2014
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
-# Import the PyQt and QGIS libraries
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-from qgis.core import *
-from qgis.gui import *
-from PyQt4.QtXml import *
+"""
+/***************************************************************************
+ AzimuthDistanceCalculator
+                                 A QGIS plugin
+ Calculates azimuths and distances
+                              -------------------
+        begin                : 2014-09-24
+        copyright            : (C) 2014 by Luiz Andrade
+        email                : luiz.claudio@dsg.eb.mil.br
+ ***************************************************************************/
 
-import math
+/***************************************************************************
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ ***************************************************************************/
+"""
 import shutil
 import os
+import time
+import sys
 
-from ui_memorialGenerator import Ui_Dialog
+from PyQt4 import uic
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+from PyQt4.QtXml import *
 
-# encoding=latin-1  
-import sys  
+FORM_CLASS, _ = uic.loadUiType(os.path.join(
+    os.path.dirname(__file__), 'ui_memorialGenerator.ui'))
 
 reload(sys)  
 sys.setdefaultencoding('utf-8')
 
-import time
-
-class MemorialGenerator( QDialog, Ui_Dialog ):
+class MemorialGenerator(QDialog, FORM_CLASS):
     
     def __init__(self, convergence, tableWidget, geomArea, geomPerimeter):
         """Constructor.
@@ -39,11 +44,11 @@ class MemorialGenerator( QDialog, Ui_Dialog ):
         self.setupUi( self )
         
         # Connecting SIGNAL/SLOTS for the Output button
-        QObject.connect(self.folderButton, SIGNAL("clicked()"), self.setDirectory)        
+        self.folderButton.clicked.connect(self.setDirectory)
 
         # Connecting SIGNAL/SLOTS for the Output button
-        QObject.connect(self.createButton, SIGNAL("clicked()"), self.createFiles)        
-        
+        self.createButton.clicked.connect(self.createFiles)
+
         self.convergenciaEdit.setText(convergence)
         
         self.tableWidget = tableWidget

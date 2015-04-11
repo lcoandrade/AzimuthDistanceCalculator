@@ -19,15 +19,14 @@
  *                                                                         *
  ***************************************************************************/
 """
-# Import the PyQt and QGIS libraries
+import os
+
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
-from qgis.core import *
-# Initialize Qt resources from file resources.py
+
 import resources_rc
-# Import the code for the dialog
+
 from azimuthdistancecalculatordialog import AzimuthDistanceCalculatorDialog
-import os.path
 
 class AzimuthDistanceCalculator:
     def __init__(self, iface):
