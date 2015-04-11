@@ -40,8 +40,6 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         
         # Connecting SIGNAL/SLOTS for the Output button
         self.calculateButton.clicked.connect(self.fillTextEdit)
-
-        # Connecting SIGNAL/SLOTS for the Output button
         self.clearButton.clicked.connect(self.clearTextEdit)
 
         self.latEdit.setInputMask("#00.00000")
@@ -56,7 +54,6 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         centralMeridian = int(abs(longitude)/6)*6 + 3
         if longitude < 0:
             centralMeridian = centralMeridian*(-1)
-
         
         b = math.cos(math.radians(latitude))*math.sin(math.radians(longitude - centralMeridian))
         
@@ -69,28 +66,33 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         """
         latitude = float(self.latEdit.text())
         longitude = float(self.longEdit.text())
+        return self.calculateConvergence2(longitude, latitude, a, b)
+
+    def calculateConvergence2(self, longitude, latitude, a, b):
+        """Calculates the meridian convergence
+        """
         centralMeridian = int(abs(longitude)/6)*6 + 3
         if longitude < 0:
             centralMeridian = centralMeridian*(-1)
-        
+
         deltaLong = abs( centralMeridian - longitude )
-        
+
         p = 0.0001*( deltaLong*3600 )
-        
+
         xii = math.sin(math.radians(latitude))*math.pow(10, 4)
-        
+
         e2 = math.sqrt(a*a - b*b)/b
-        
+
         c5 = math.pow(math.sin(math.radians(1/3600)), 4)*math.sin(math.radians(latitude))*math.pow(math.cos(math.radians(latitude)), 4)*(2 - math.pow(math.tan(math.radians(latitude)), 2))*math.pow(10, 20)/15
-        
+
         xiii = math.pow(math.sin(math.radians(1/3600)), 2)*math.sin(math.radians(latitude))*math.pow(math.cos(math.radians(latitude)), 2)*(1 + 3*e2*e2*math.pow(math.cos(math.radians(latitude)), 2) + 2*math.pow(e2, 4)*math.pow(math.cos(math.radians(latitude)), 4))*math.pow(10, 12)/3
-        
+
         cSeconds = xii*p + xiii*math.pow(p, 3) + c5*math.pow(p, 5)
-        
+
         c = cSeconds/3600
-        
+
         return c
-        
+
     def getSemiMajorAndSemiMinorAxis(self):
         """Obtains the semi major axis and semi minor axis from the used ellipsoid
         """
@@ -116,17 +118,35 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         utmPoint = coordinateTransformer.transform(QgsPoint(longitude, latitude))
         
         return utmPoint
-        
+
+    def getGeographicCoordinates(self, x, y):
+        """Transform the planar coordinates to geographic coordinates
+        """
+        crsSrc = self.iface.mapCanvas().currentLayer().crs()
+        crsDest = QgsCoordinateReferenceSystem(crsSrc.geographicCRSAuthId())
+
+        coordinateTransformer = QgsCoordinateTransform(crsSrc, crsDest)
+
+        geoPoint = coordinateTransformer.transform(QgsPoint(x, y))
+
+        return geoPoint
+
+    def getCentralMeridian(self, longitude):
+        centralMeridian = int(abs(longitude)/6)*6 + 3
+        if longitude < 0:
+            centralMeridian = centralMeridian*(-1)
+
+        return centralMeridian
+
     def fillTextEdit(self):
         """Fills the text area with the calculated information
         """
+        print 123
         self.textEdit.clear()
         
         latitude = float(self.latEdit.text())
         longitude = float(self.longEdit.text())
-        centralMeridian = int(abs(longitude)/6)*6 + 3
-        if longitude < 0:
-            centralMeridian = centralMeridian*(-1)
+        centralMeridian = self.getCentralMeridian(longitude)
         utmZone = int(centralMeridian/6) + 31
         
         ab = self.getSemiMajorAndSemiMinorAxis()

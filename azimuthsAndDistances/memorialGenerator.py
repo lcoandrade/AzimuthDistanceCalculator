@@ -37,7 +37,7 @@ sys.setdefaultencoding('utf-8')
 
 class MemorialGenerator(QDialog, FORM_CLASS):
     
-    def __init__(self, convergence, tableWidget, geomArea, geomPerimeter):
+    def __init__(self, crsDescription, centralMeridian, convergence, tableWidget, geomArea, geomPerimeter):
         """Constructor.
         """
         QDialog.__init__( self )
@@ -54,6 +54,10 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         self.tableWidget = tableWidget
         self.geomArea = geomArea
         self.geomPerimeter = geomPerimeter
+
+        self.meridianoEdit.setText(str(centralMeridian))
+        self.projectionEdit.setText(crsDescription.split('/')[-1])
+        self.datumEdit.setText(crsDescription.split('/')[0])
         
     def setDirectory(self):
         folder = QFileDialog.getExistingDirectory(self, "Select Directory")

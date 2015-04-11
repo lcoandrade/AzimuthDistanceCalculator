@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>723</width>
-    <height>338</height>
+    <width>733</width>
+    <height>398</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,18 +30,29 @@
     </widget>
    </item>
    <item row="1" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Inform the Meridian Convergence:</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Inform the Meridian Convergence:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="toolTip">
+          <string>Use decimal degrees</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="toolTip">
-        <string>Use decimal degrees</string>
+      <widget class="QPushButton" name="convergenceButton">
+       <property name="text">
+        <string>Calculate convergence based on the centroid</string>
        </property>
       </widget>
      </item>

@@ -30,6 +30,7 @@ FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'ui_azimuthsAndDistances.ui'))
 
 from AzimuthDistanceCalculator.azimuthsAndDistances.memorialGenerator import MemorialGenerator
+from AzimuthDistanceCalculator.kappaAndConvergence.calculateKappaAndConvergence import CalculateKappaAndConvergenceDialog
 
 class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
     """Class that calculates azimuths and distances among vertexes in a linestring.
@@ -48,14 +49,29 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
 
         # Connecting SIGNAL/SLOTS for the Output button
         self.calculateButton.clicked.connect(self.fillTable)
-
-        # Connecting SIGNAL/SLOTS for the Output button
         self.clearButton.clicked.connect(self.clearTable)
-
-        # Connecting SIGNAL/SLOTS for the Output button
         self.saveFilesButton.clicked.connect(self.saveFiles)
+        self.convergenceButton.clicked.connect(self.calculateConvergence)
 
         self.lineEdit.setInputMask("#00.00000")
+
+    def calculateConvergence(self):
+        convergenceCalculator = CalculateKappaAndConvergenceDialog(self.iface)
+        (a, b) = convergenceCalculator.getSemiMajorAndSemiMinorAxis()
+
+        currentLayer = self.iface.mapCanvas().currentLayer()
+        if currentLayer:
+            selectedFeatures = len(currentLayer.selectedFeatures())
+            if selectedFeatures == 1:
+                selectedFeature = currentLayer.selectedFeatures()[0]
+
+                centroid = selectedFeature.geometry().centroid()
+                geoPoint = convergenceCalculator.getGeographicCoordinates(centroid.asPoint().x(), centroid.asPoint().y())
+                self.centralMeridian = convergenceCalculator.getCentralMeridian(geoPoint.x())
+
+                convergence = convergenceCalculator.calculateConvergence2(geoPoint.x(), geoPoint.y(), a, b)
+
+                self.lineEdit.setText(str(convergence))
 
     def setClockWiseRotation(self, points):
         n = len(points)
@@ -97,7 +113,7 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
                 item = self.tableWidget.item(i, 7)
                 confrontingList.append(item.text())
 
-            d = MemorialGenerator(self.lineEdit.text(), self.tableWidget, self.area, self.perimeter)
+            d = MemorialGenerator(self.iface.mapCanvas().currentLayer().crs().description(), self.centralMeridian, self.lineEdit.text(), self.tableWidget, self.area, self.perimeter)
             d.exec_()
 
     def isValidType(self):
@@ -192,5 +208,5 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
         d = int(dd)
         m = abs(int(60*(dd-int(dd))))
         s = abs((dd-d-m/60)*60)
-        dms = str(d) + u"\u00b0" + str(m).zfill(2) + "'" + "%0.2f" % s  + "''"
+        dms = str(d) + u"\u00b0" + str(m).zfill(2) + "'" + "%0.2f" % s + "''"
         return dms
