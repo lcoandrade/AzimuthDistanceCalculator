@@ -4,19 +4,14 @@
 <context>
     <name>AzimuthDistanceCalculator</name>
     <message>
-        <location filename="azimuthdistancecalculator.py" line="72"/>
+        <location filename="azimuthdistancecalculator.py" line="71"/>
         <source>Calculator</source>
         <translation>Calculador</translation>
     </message>
     <message>
-        <location filename="azimuthdistancecalculator.py" line="84"/>
+        <location filename="azimuthdistancecalculator.py" line="83"/>
         <source>Azimuth and Distance Calculator</source>
         <translation>Calculador de Azimutes e Distâncias</translation>
-    </message>
-    <message>
-        <location filename="ui_azimuthdistancecalculator.ui" line="14"/>
-        <source>AzimuthDistanceCalculator</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="ui_azimuthdistancecalculator.ui" line="20"/>
@@ -46,21 +41,26 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; font-weight:600; color:#ff0000;&quot;&gt;Todos os arquivos gerados são feitos de acordo com a legislação brasileira. Sinta-se livre para conferir o código e fazer os documentos no seu idioma.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
+    <message>
+        <location filename="ui_azimuthdistancecalculator.ui" line="14"/>
+        <source>AzimuthDistanceCalculator</source>
+        <translation>AzimuthDistanceCalculator</translation>
+    </message>
 </context>
 <context>
     <name>AzimuthDistanceCalculatorDialog</name>
     <message>
-        <location filename="azimuthdistancecalculatordialog.py" line="77"/>
+        <location filename="azimuthdistancecalculatordialog.py" line="71"/>
         <source>Warning!</source>
         <translation>Atenção!</translation>
     </message>
     <message>
-        <location filename="azimuthdistancecalculatordialog.py" line="77"/>
+        <location filename="azimuthdistancecalculatordialog.py" line="71"/>
         <source>Please, open a layer and select a line or polygon feature.</source>
         <translation>Por favor, abra uma camada e selecione uma linha ou polígono.</translation>
     </message>
     <message>
-        <location filename="azimuthdistancecalculatordialog.py" line="75"/>
+        <location filename="azimuthdistancecalculatordialog.py" line="69"/>
         <source>One and only one feature must be selected to perform the calculations.</source>
         <translation>Uma e somente uma feição deve estar selecionada para realizar os cálculos.</translation>
     </message>
@@ -68,27 +68,27 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>AzimuthsAndDistancesDialog</name>
     <message>
-        <location filename="azimuthsAndDistances.py" line="141"/>
+        <location filename="azimuthsAndDistances.py" line="167"/>
         <source>Warning!</source>
         <translation>Atenção!</translation>
     </message>
     <message>
-        <location filename="azimuthsAndDistances.py" line="83"/>
+        <location filename="azimuthsAndDistances.py" line="109"/>
         <source>Click on calculate button first to generate the needed data.</source>
         <translation>Clique primeiro no botão calcular para gerar os dados necessários.</translation>
     </message>
     <message>
-        <location filename="azimuthsAndDistances.py" line="97"/>
+        <location filename="azimuthsAndDistances.py" line="123"/>
         <source>The limit of a patrimonial area must be a single part geometry.</source>
         <translation>O limite de uma área patrimonial não pode ser uma geometria multiparte.</translation>
     </message>
     <message>
-        <location filename="azimuthsAndDistances.py" line="111"/>
+        <location filename="azimuthsAndDistances.py" line="137"/>
         <source>The selected geometry should be a Line or a Polygon.</source>
         <translation>A geometria selecionada deve ser uma linha ou polígono.</translation>
     </message>
     <message>
-        <location filename="azimuthsAndDistances.py" line="141"/>
+        <location filename="azimuthsAndDistances.py" line="167"/>
         <source>Please, insert the meridian convergence.</source>
         <translation>Por favor, insira a convergência meridiana.</translation>
     </message>
@@ -96,27 +96,27 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>CalculateKappaAndConvergenceDialog</name>
     <message>
-        <location filename="calculateKappaAndConvergence.py" line="138"/>
+        <location filename="calculateKappaAndConvergence.py" line="168"/>
         <source>UTM Zone = </source>
         <translation>Zona UTM = </translation>
     </message>
     <message>
-        <location filename="calculateKappaAndConvergence.py" line="139"/>
+        <location filename="calculateKappaAndConvergence.py" line="169"/>
         <source>Central Meridian = </source>
         <translation>Meridiano Central = </translation>
     </message>
     <message>
-        <location filename="calculateKappaAndConvergence.py" line="140"/>
+        <location filename="calculateKappaAndConvergence.py" line="170"/>
         <source>Kappa = </source>
         <translation>Kappa = </translation>
     </message>
     <message>
-        <location filename="calculateKappaAndConvergence.py" line="141"/>
+        <location filename="calculateKappaAndConvergence.py" line="171"/>
         <source>Convergence DMS = </source>
         <translation>Convergencia em Grau Minuto Segundo = </translation>
     </message>
     <message>
-        <location filename="calculateKappaAndConvergence.py" line="142"/>
+        <location filename="calculateKappaAndConvergence.py" line="172"/>
         <source>Convergence Decimal Degrees = </source>
         <translation>Convergência em Grau decimal = </translation>
     </message>
@@ -134,69 +134,94 @@ p, li { white-space: pre-wrap; }
         <translation>Descrição da Geometria</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="37"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="39"/>
         <source>Inform the Meridian Convergence:</source>
         <translation>Informe a Convergencia Meridiana:</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="44"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="46"/>
         <source>Use decimal degrees</source>
         <translation>Use grau decimal</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="54"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="65"/>
         <source>Vertex</source>
         <translation>Vértice</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="59"/>
-        <source>E</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="64"/>
-        <source>N</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="69"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="80"/>
         <source>Side</source>
         <translation>Lado</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="74"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="85"/>
         <source>Planar Azimuth</source>
         <translation>Azimute Planar</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="79"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="90"/>
         <source>Real Azimuth</source>
         <translation>Azimute Real</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="84"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="95"/>
         <source>Distance</source>
         <translation>Distância</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="89"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="100"/>
         <source>Confronting</source>
         <translation>Confrontante</translation>
     </message>
     <message>
-        <location filename="ui_kappaAndConvergence.ui" line="87"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="110"/>
         <source>Calculate</source>
         <translation>Calcular</translation>
     </message>
     <message>
-        <location filename="ui_kappaAndConvergence.ui" line="94"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="117"/>
         <source>Clear</source>
         <translation>Limpar</translation>
     </message>
     <message>
-        <location filename="ui_azimuthsAndDistances.ui" line="115"/>
+        <location filename="ui_azimuthsAndDistances.ui" line="126"/>
         <source>Save Files</source>
         <translation>Salvar Arquivos</translation>
+    </message>
+    <message>
+        <location filename="ui_kappaAndConvergence.ui" line="14"/>
+        <source>Kappa and Convergence</source>
+        <translation>Kappa e Convergência</translation>
+    </message>
+    <message>
+        <location filename="ui_kappaAndConvergence.ui" line="73"/>
+        <source>Use decimal degree values</source>
+        <translation>Use valores em grau decimal</translation>
+    </message>
+    <message>
+        <location filename="ui_kappaAndConvergence.ui" line="22"/>
+        <source>Longitude</source>
+        <translation>Longitude</translation>
+    </message>
+    <message>
+        <location filename="ui_kappaAndConvergence.ui" line="53"/>
+        <source>Latitude</source>
+        <translation>Latitude</translation>
+    </message>
+    <message>
+        <location filename="ui_azimuthsAndDistances.ui" line="55"/>
+        <source>Calculate convergence based on the centroid</source>
+        <translation>Calcular a convergência baseada no centróide</translation>
+    </message>
+    <message>
+        <location filename="ui_azimuthsAndDistances.ui" line="70"/>
+        <source>E</source>
+        <translation>E</translation>
+    </message>
+    <message>
+        <location filename="ui_azimuthsAndDistances.ui" line="75"/>
+        <source>N</source>
+        <translation>N</translation>
     </message>
     <message utf8="true">
         <location filename="ui_memorialGenerator.ui" line="14"/>
@@ -328,25 +353,18 @@ p, li { white-space: pre-wrap; }
         <source>Criar arquivos</source>
         <translation></translation>
     </message>
+</context>
+<context>
+    <name>MemorialGenerator</name>
     <message>
-        <location filename="ui_kappaAndConvergence.ui" line="14"/>
-        <source>Kappa and Convergence</source>
-        <translation>Kappa e Convergência</translation>
+        <location filename="memorialGenerator.py" line="96"/>
+        <source>Information!</source>
+        <translation>Informação!</translation>
     </message>
     <message>
-        <location filename="ui_kappaAndConvergence.ui" line="22"/>
-        <source>Longitude</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="ui_kappaAndConvergence.ui" line="73"/>
-        <source>Use decimal degree values</source>
-        <translation>Use valores em grau decimal</translation>
-    </message>
-    <message>
-        <location filename="ui_kappaAndConvergence.ui" line="53"/>
-        <source>Latitude</source>
-        <translation></translation>
+        <location filename="memorialGenerator.py" line="96"/>
+        <source>Files created successfully!</source>
+        <translation>Arquivos criados com sucesso!</translation>
     </message>
 </context>
 </TS>
