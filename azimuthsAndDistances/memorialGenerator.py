@@ -88,6 +88,8 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         self.createArea()
         
         self.createSimpleMemorial()
+
+        QMessageBox.information(self, self.tr('Information!'), self.tr('Files created successfully!'))
         
     def createCellElement(self, tempDoc, text, colspan, rowspan):
         td = tempDoc.createElement("td")

@@ -47,10 +47,10 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
         self.area = self.geom.area()
 
         # Connecting SIGNAL/SLOTS for the Output button
-        self.calculateButton.clicked.connect(self.fillTextEdit)
+        self.calculateButton.clicked.connect(self.fillTable)
 
         # Connecting SIGNAL/SLOTS for the Output button
-        self.clearButton.clicked.connect(self.clearTextEdit)
+        self.clearButton.clicked.connect(self.clearTable)
 
         # Connecting SIGNAL/SLOTS for the Output button
         self.saveFilesButton.clicked.connect(self.saveFiles)
@@ -138,7 +138,7 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
 
         return self.distancesAndAzimuths
 
-    def fillTextEdit(self):
+    def fillTable(self):
         """Makes the CSV.
         """
         distancesAndAzimuths = list()
@@ -185,8 +185,8 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
             itemConfronting = QTableWidgetItem("")
             self.tableWidget.setItem(i,7,itemConfronting)
 
-    def clearTextEdit(self):
-        self.textEdit.clear()
+    def clearTable(self):
+        self.tableWidget.setRowCount(0)
 
     def dd2dms(self, dd):
         d = int(dd)
