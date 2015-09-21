@@ -15,13 +15,21 @@ description=Calculates azimuths and distances for a selected feature. The featur
 version=1.0
 author=Luiz Andrade
 email=luiz.claudio@dsg.eb.mil.br
+about=
+	Azimuth and Distance Calculator Version 1.0.1 also generates:
+	- Memorial descritivo
+	- Memorial sintético
+	- Selo da planta
+	- Planilha de áreas e perímetros
 
 # end of mandatory metadata
 
 # Optional items:
 
 # Uncomment the following line and add your changelog entries:
-changelog= Code improvements. Now the meridian convergence can be calculated automatically based on the centroid. Projection information is automatically in the save files dialog.
+changelog=
+	1.0 - Code improvements. Now the meridian convergence can be calculated automatically based on the centroid. Projection information is automatically in the save files dialog.
+	1.0.1 - Minor fix.
 
 # tags are comma separated with spaces allowed
 tags=Document,UTM,Meridian,Azimuth,Patrimonial,Distance,Calculator,Factor,Convergence,Memorial,Kappa

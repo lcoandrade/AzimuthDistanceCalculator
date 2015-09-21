@@ -177,6 +177,8 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         area = open(self.area, "r")
         fileData = area.read()
         area.close()
+
+        kappa = float(self.kappaEdit.text())
         
         newData = fileData.replace("[IMOVEL]", self.imovelEdit.text())
         newData = newData.replace("[PROPRIETARIO]", self.proprietarioEdit.text())
@@ -185,9 +187,9 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         newData = newData.replace("[DATUM]", self.datumEdit.text())
         newData = newData.replace("[MERIDIANO]", self.meridianoEdit.text())
         newData = newData.replace("[KAPPA]", self.kappaEdit.text())
-        geomPerimeter = self.geomPerimeter*(float(self.kappaEdit.text()))
+        geomPerimeter = self.geomPerimeter/kappa
         newData = newData.replace("[PERIMETRO]", "%0.2f"%(geomPerimeter))
-        geomArea = self.geomArea*(float(self.kappaEdit.text()))*(float(self.kappaEdit.text()))
+        geomArea = self.geomArea/(kappa*kappa)
         newData = newData.replace("[AREA]", "%0.2f"%(geomArea))
         
         newData += "\n"
@@ -237,14 +239,16 @@ class MemorialGenerator(QDialog, FORM_CLASS):
         memorial = open(self.fullMemorial, "r")
         fileData = memorial.read()
         memorial.close()
+
+        kappa = float(self.kappaEdit.text())
         
         newData = fileData.replace("[IMOVEL]", self.imovelEdit.text())
         newData = newData.replace("[PROPRIETARIO]", self.proprietarioEdit.text())
         newData = newData.replace("[UF]", self.ufEdit.text())
         newData = newData.replace("[COD_INCRA]", self.codIncraEdit.text())
-        geomPerimeter = self.geomPerimeter*(float(self.kappaEdit.text()))
+        geomPerimeter = self.geomPerimeter/kappa
         newData = newData.replace("[PERIMETRO]", "%0.2f"%(geomPerimeter))
-        geomArea = self.geomArea*(float(self.kappaEdit.text()))*(float(self.kappaEdit.text()))
+        geomArea = self.geomArea/(kappa*kappa)
         newData = newData.replace("[AREA]", "%0.2f"%(geomArea))
         newData = newData.replace("[COMARCA]", self.comarcaEdit.text())
         newData = newData.replace("[MUNICIPIO]", self.municipioEdit.text())

@@ -141,7 +141,6 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
     def fillTextEdit(self):
         """Fills the text area with the calculated information
         """
-        print 123
         self.textEdit.clear()
         
         latitude = float(self.latEdit.text())
