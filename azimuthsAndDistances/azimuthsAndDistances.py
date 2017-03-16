@@ -21,8 +21,8 @@
 """
 import os
 from PyQt4 import uic
-from PyQt4.QtGui import *
-from qgis.core import *
+from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox
+from qgis.core import QGis
 
 import math
 
@@ -205,8 +205,12 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
         self.tableWidget.setRowCount(0)
 
     def dd2dms(self, dd):
-        d = int(dd)
-        m = abs(int(60*(dd-int(dd))))
-        s = abs((dd-d-m/60)*60)
-        dms = str(d) + u"\u00b0" + str(m).zfill(2) + "'" + "%0.2f" % s + "''"
-        return dms
+        is_positive = dd >= 0
+        dd = abs(dd)
+        minutes,seconds = divmod(dd*3600,60)
+        degrees,minutes = divmod(minutes,60)
+
+        degrees = str(int(degrees)) if is_positive else '-' + str(int(degrees))
+        minutes = int(minutes)
+
+        return degrees + u"\u00b0" + str(minutes).zfill(2) + "'" + "%0.2f"%(seconds) + "''"        

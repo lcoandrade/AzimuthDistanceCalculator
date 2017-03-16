@@ -21,8 +21,8 @@
 """
 import os
 from PyQt4 import uic
-from PyQt4.QtGui import *
-from qgis.core import *
+from PyQt4.QtGui import QDialog
+from qgis.core import QgsCoordinateReferenceSystem, QgsDistanceArea, QgsCoordinateTransform, QgsPoint
 
 import math
 
@@ -153,10 +153,7 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         reducedKappa = self.calculateKappa()
         c = self.calculateConvergence(ab[0], ab[1])
         
-        convergenceGrau = int(c)
-        convergenceMinuto = abs(int(60*(c-int(c))))
-        convergenceSegundo = abs((c-convergenceGrau-convergenceMinuto/60)*60)
-        convergence = str(convergenceGrau) + u"\u00b0" + str(convergenceMinuto).zfill(2) + "'" + "%0.2f"%(convergenceSegundo) + "''"
+        convergence = self.dd2dms(c)
         
         utmPoint = self.getPlanarCoordinates()
         
@@ -172,3 +169,14 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         
     def clearTextEdit(self):
         self.textEdit.clear()
+
+    def dd2dms(self, dd):
+        is_positive = dd >= 0
+        dd = abs(dd)
+        minutes,seconds = divmod(dd*3600,60)
+        degrees,minutes = divmod(minutes,60)
+
+        degrees = str(int(degrees)) if is_positive else '-' + str(int(degrees))
+        minutes = int(minutes)
+
+        return degrees + u"\u00b0" + str(minutes).zfill(2) + "'" + "%0.2f"%(seconds) + "''"

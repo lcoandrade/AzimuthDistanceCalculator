@@ -22,7 +22,7 @@
 import os
 
 from PyQt4 import uic
-from PyQt4.QtGui import *
+from PyQt4.QtGui import QMessageBox, QDialog
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'ui_azimuthdistancecalculator.ui'))

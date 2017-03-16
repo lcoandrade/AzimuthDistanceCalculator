@@ -21,12 +21,19 @@
 """
 import os
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt4.QtCore import QCoreApplication
+from PyQt4.QtGui import QIcon, QAction
+from PyQt4.QtCore import QSettings, QTranslator, qVersion
 
 import resources_rc
 
 from azimuthdistancecalculatordialog import AzimuthDistanceCalculatorDialog
+
+try:
+    import ptvsd
+    ptvsd.enable_attach(secret='my_secret', address = ('localhost', 5679))
+except:
+    pass
 
 class AzimuthDistanceCalculator:
     def __init__(self, iface):

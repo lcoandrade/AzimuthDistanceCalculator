@@ -25,9 +25,9 @@ import time
 import sys
 
 from PyQt4 import uic
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-from PyQt4.QtXml import *
+from PyQt4.QtCore import QFile, QIODevice
+from PyQt4.QtGui import QFileDialog, QMessageBox, QDialog
+from PyQt4.QtXml import QDomDocument
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'ui_memorialGenerator.ui'))
