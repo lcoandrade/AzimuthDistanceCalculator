@@ -361,6 +361,11 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="azimuthsAndDistances/ui_azimuthsAndDistances.ui" line="66"/>
         <source>Number of Decimal placesfor coordinates:</source>
+        <translation type="obsolete">Número de casas decimais das coordenadas:</translation>
+    </message>
+    <message>
+        <location filename="azimuthsAndDistances/ui_azimuthsAndDistances.ui" line="66"/>
+        <source>Number of Decimal places for coordinates:</source>
         <translation type="unfinished">Número de casas decimais das coordenadas:</translation>
     </message>
 </context>

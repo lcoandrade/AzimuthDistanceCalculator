@@ -63,7 +63,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Number of Decimal placesfor coordinates:</string>
+        <string>Number of Decimal places for coordinates:</string>
        </property>
       </widget>
      </item>
