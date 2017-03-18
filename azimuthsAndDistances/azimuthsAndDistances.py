@@ -25,6 +25,7 @@ from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox
 from qgis.core import QGis
 
 import math
+from decimal import Decimal
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'ui_azimuthsAndDistances.ui'))
@@ -52,6 +53,7 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
         self.clearButton.clicked.connect(self.clearTable)
         self.saveFilesButton.clicked.connect(self.saveFiles)
         self.convergenceButton.clicked.connect(self.calculateConvergence)
+        self.spinBox.valueChanged.connect(self.fillTable)
 
         self.lineEdit.setInputMask("#00.00000")
 
@@ -149,6 +151,9 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
     def fillTable(self):
         """Makes the CSV.
         """
+        decimalPlaces = self.spinBox.value()
+        q = Decimal(10)**-decimalPlaces
+        
         distancesAndAzimuths = list()
         isValid = self.isValidType()
         if isValid:
@@ -170,28 +175,30 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
             realAzimuth = self.dd2dms(distancesAndAzimuths[i][1] + convergence)
 
             itemVertex = QTableWidgetItem("Pt"+str(i))
-            self.tableWidget.setItem(i,0,itemVertex)
-            itemE = QTableWidgetItem(str(self.points[i].x()))
-            self.tableWidget.setItem(i,1,itemE)
-            itemN = QTableWidgetItem(str(self.points[i].y()))
-            self.tableWidget.setItem(i,2,itemN)
+            self.tableWidget.setItem(i, 0, itemVertex)
+            e = Decimal(self.points[i].x()).quantize(q)
+            itemE = QTableWidgetItem(str(e))
+            self.tableWidget.setItem(i, 1, itemE)
+            n = Decimal(self.points[i].y()).quantize(q)
+            itemN = QTableWidgetItem(str(n))
+            self.tableWidget.setItem(i, 2, itemN)
 
             if (i == len(distancesAndAzimuths) - 1) and isClosed:
                 itemSide = QTableWidgetItem("Pt"+str(i)+"-Pt0")
-                self.tableWidget.setItem(i,3,itemSide)
+                self.tableWidget.setItem(i, 3, itemSide)
             else:
                 itemSide = QTableWidgetItem("Pt"+str(i)+"-Pt"+str(i+1))
-                self.tableWidget.setItem(i,3,itemSide)
+                self.tableWidget.setItem(i, 3, itemSide)
 
             itemAz = QTableWidgetItem(azimuth)
-            self.tableWidget.setItem(i,4,itemAz)
+            self.tableWidget.setItem(i, 4, itemAz)
             itemRealAz = QTableWidgetItem(realAzimuth)
-            self.tableWidget.setItem(i,5,itemRealAz)
+            self.tableWidget.setItem(i, 5, itemRealAz)
             dist = "%0.2f"%(distancesAndAzimuths[i][0])
             itemDistance = QTableWidgetItem(dist)
-            self.tableWidget.setItem(i,6,itemDistance)
+            self.tableWidget.setItem(i, 6, itemDistance)
             itemConfronting = QTableWidgetItem("")
-            self.tableWidget.setItem(i,7,itemConfronting)
+            self.tableWidget.setItem(i, 7, itemConfronting)
 
     def clearTable(self):
         self.tableWidget.setRowCount(0)
@@ -199,8 +206,8 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
     def dd2dms(self, dd):
         is_positive = dd >= 0
         dd = abs(dd)
-        minutes,seconds = divmod(dd*3600,60)
-        degrees,minutes = divmod(minutes,60)
+        minutes, seconds = divmod(dd*3600,60)
+        degrees, minutes = divmod(minutes,60)
 
         degrees = str(int(degrees)) if is_positive else '-' + str(int(degrees))
         minutes = int(minutes)

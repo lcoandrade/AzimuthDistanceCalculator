@@ -12,7 +12,7 @@
 name=Azimuth and Distance Calculator
 qgisMinimumVersion=2.0
 description=Calculates azimuths and distances for a selected feature. The feature can be either a line or a polygon. The plugin also calculates Meridian Convergence and Kappa Factor for UTM projections to a given geographical coordinate.
-version=1.0.2
+version=1.1
 author=Luiz Andrade
 email=luizclaudio.andrade@eb.mil.br
 about=
@@ -31,6 +31,7 @@ changelog=
 	1.0 - Code improvements. Now the meridian convergence can be calculated automatically based on the centroid. Projection information is automatically in the save files dialog.
 	1.0.1 - Minor fix.
 	1.0.2 - Improving precision in dd2dms calculations
+	1.1 - User can choose decimal places to show coordinates dynamically
 
 # tags are comma separated with spaces allowed
 tags=Document,UTM,Meridian,Azimuth,Patrimonial,Distance,Calculator,Factor,Convergence,Memorial,Kappa
