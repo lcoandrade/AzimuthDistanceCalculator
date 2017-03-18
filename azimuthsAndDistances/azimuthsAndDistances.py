@@ -73,24 +73,15 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
 
                 self.lineEdit.setText(str(convergence))
 
-    # I'm not using this anymore, in some cases does not work
     def setClockWiseRotation(self, points):
-        n = len(points)
-        count = 0
-        for i in xrange(n):
-            j = (i+1)%n
-            k = (i+2)%n
-            z = (points[j].x() - points[i].x())*(points[k].y() - points[j].y())
-            z -= (points[j].y() - points[i].y())*(points[k].x() - points[j].x())
-            if z < 0:
-                count -= 1
-            elif z > 0:
-                count += 1
+        sum = 0
+        for i in xrange(len(points) - 1):
+            sum += (points[i+1].x() - points[i].x())*(points[i+1].y() - points[i].y())
 
-        if count > 0: #Is counter clockwise and we should revert it
-            points = points[::-1]
-
-        return points
+        if sum > 0:
+            return points
+        else:
+            return points[::-1]
 
     def setFirstPointToNorth(self, coords, yMax):
         if coords[0].y() == yMax:
@@ -130,9 +121,9 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
                 self.points = self.points[::-1]
             return True
         elif self.geom.type() == QGis.Polygon:
-            # points = self.setClockWiseRotation(self.geom.asPolygon()[0])
+            points = self.setClockWiseRotation(self.geom.asPolygon()[0])
             yMax = self.geom.boundingBox().yMaximum()
-            self.points = self.setFirstPointToNorth(self.geom.asPolygon()[0], yMax)
+            self.points = self.setFirstPointToNorth(points, yMax)
             return True
         else:
             QMessageBox.information(self.iface.mainWindow(), self.tr("Warning!"), self.tr("The selected geometry should be a Line or a Polygon."))
