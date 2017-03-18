@@ -73,6 +73,7 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
 
                 self.lineEdit.setText(str(convergence))
 
+    # I'm not using this anymore, in some cases does not work
     def setClockWiseRotation(self, points):
         n = len(points)
         count = 0
@@ -129,9 +130,9 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
                 self.points = self.points[::-1]
             return True
         elif self.geom.type() == QGis.Polygon:
-            points = self.setClockWiseRotation(self.geom.asPolygon()[0])
+            # points = self.setClockWiseRotation(self.geom.asPolygon()[0])
             yMax = self.geom.boundingBox().yMaximum()
-            self.points = self.setFirstPointToNorth(points, yMax)
+            self.points = self.setFirstPointToNorth(self.geom.asPolygon()[0], yMax)
             return True
         else:
             QMessageBox.information(self.iface.mainWindow(), self.tr("Warning!"), self.tr("The selected geometry should be a Line or a Polygon."))
