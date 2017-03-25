@@ -22,7 +22,7 @@
 import os
 from PyQt4 import uic
 from PyQt4.QtGui import QDialog, QTableWidgetItem, QMessageBox
-from qgis.core import QGis
+from qgis.core import QGis, QgsGeometry
 
 import math
 from decimal import Decimal
@@ -78,7 +78,7 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
     def setClockWiseRotation(self, points):
         sum = 0
         for i in xrange(len(points) - 1):
-            sum += (points[i+1].x() - points[i].x())*(points[i+1].y() - points[i].y())
+            sum += (points[i+1].x() - points[i].x())*(points[i+1].y() + points[i].y())
 
         if sum > 0:
             return points
