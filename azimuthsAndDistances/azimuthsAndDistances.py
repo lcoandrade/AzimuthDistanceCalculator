@@ -55,8 +55,6 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
         self.convergenceButton.clicked.connect(self.calculateConvergence)
         self.spinBox.valueChanged.connect(self.fillTable)
 
-        self.lineEdit.setInputMask("#00.00000")
-
     def calculateConvergence(self):
         convergenceCalculator = CalculateKappaAndConvergenceDialog(self.iface)
         (a, b) = convergenceCalculator.getSemiMajorAndSemiMinorAxis()
