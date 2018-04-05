@@ -19,11 +19,10 @@
  *                                                                         *
  ***************************************************************************/
 """
-from builtins import str
 import os
-from qgis.PyQt import uic
-from qgis.PyQt.QtWidgets import QDialog
-from qgis.core import QgsCoordinateReferenceSystem, QgsDistanceArea, QgsCoordinateTransform, QgsPointXY, QgsProject
+from PyQt4 import uic
+from PyQt4.QtGui import QDialog
+from qgis.core import QgsCoordinateReferenceSystem, QgsDistanceArea, QgsCoordinateTransform, QgsPoint
 
 import math
 
@@ -112,11 +111,11 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         longitude = float(self.longEdit.text())
         
         crsDest = self.iface.mapCanvas().currentLayer().crs()
-        crsSrc = QgsCoordinateReferenceSystem(crsDest.geographicCrsAuthId())
+        crsSrc = QgsCoordinateReferenceSystem(crsDest.geographicCRSAuthId())
         
-        coordinateTransformer = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
+        coordinateTransformer = QgsCoordinateTransform(crsSrc, crsDest)
         
-        utmPoint = coordinateTransformer.transform(QgsPointXY(longitude, latitude))
+        utmPoint = coordinateTransformer.transform(QgsPoint(longitude, latitude))
         
         return utmPoint
 
@@ -124,11 +123,11 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         """Transform the planar coordinates to geographic coordinates
         """
         crsSrc = self.iface.mapCanvas().currentLayer().crs()
-        crsDest = QgsCoordinateReferenceSystem(crsSrc.geographicCrsAuthId())
+        crsDest = QgsCoordinateReferenceSystem(crsSrc.geographicCRSAuthId())
 
-        coordinateTransformer = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
+        coordinateTransformer = QgsCoordinateTransform(crsSrc, crsDest)
 
-        geoPoint = coordinateTransformer.transform(QgsPointXY(x, y))
+        geoPoint = coordinateTransformer.transform(QgsPoint(x, y))
 
         return geoPoint
 

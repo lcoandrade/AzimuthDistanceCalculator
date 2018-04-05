@@ -83,7 +83,7 @@ if __name__ == "__main__":
         username = getpass.getuser()
         # fix_print_with_import
         print("Please enter user name [%s] :"%username, end=' ')
-        res = eval(input())
+        res = input()
         if res != "":
             options.username = res
         else:
