@@ -56,6 +56,7 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
         self.saveFilesButton.clicked.connect(self.saveFiles)
         self.convergenceButton.clicked.connect(self.calculateConvergence)
         self.spinBox.valueChanged.connect(self.fillTable)
+        self.prefixEdit.textChanged.connect(self.fillTable)
 
     def calculateConvergence(self):
         convergenceCalculator = CalculateKappaAndConvergenceDialog(self.iface)
@@ -170,11 +171,13 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
 
         self.tableWidget.setRowCount(len(distancesAndAzimuths))
 
+        prefix = self.prefixEdit.text()
+
         for i in range(0,len(distancesAndAzimuths)):
             azimuth = self.dd2dms(distancesAndAzimuths[i][1])
             realAzimuth = self.dd2dms(distancesAndAzimuths[i][1] + convergence)
 
-            itemVertex = QTableWidgetItem("Pt"+str(i))
+            itemVertex = QTableWidgetItem(prefix+str(i))
             self.tableWidget.setItem(i, 0, itemVertex)
             e = Decimal(self.points[i].x()).quantize(q)
             itemE = QTableWidgetItem(str(e))
@@ -184,10 +187,10 @@ class AzimuthsAndDistancesDialog(QDialog, FORM_CLASS):
             self.tableWidget.setItem(i, 2, itemN)
 
             if (i == len(distancesAndAzimuths) - 1) and isClosed:
-                itemSide = QTableWidgetItem("Pt"+str(i)+"-Pt0")
+                itemSide = QTableWidgetItem(prefix+str(i)+"-{}0".format(prefix))
                 self.tableWidget.setItem(i, 3, itemSide)
             else:
-                itemSide = QTableWidgetItem("Pt"+str(i)+"-Pt"+str(i+1))
+                itemSide = QTableWidgetItem(prefix+str(i)+"-{}".format(prefix)+str(i+1))
                 self.tableWidget.setItem(i, 3, itemSide)
 
             itemAz = QTableWidgetItem(azimuth)
