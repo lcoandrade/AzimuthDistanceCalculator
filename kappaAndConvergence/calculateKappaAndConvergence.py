@@ -180,4 +180,4 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
         degrees = str(int(degrees)) if is_positive else '-' + str(int(degrees))
         minutes = int(minutes)
 
-        return degrees + u"\u00b0" + str(minutes).zfill(2) + "'" + "%0.2f"%(seconds) + "''"
+        return degrees + u"\u00b0" + str(minutes).zfill(2) + "'" + "%0.2f"%(seconds) + u"\u0022"
