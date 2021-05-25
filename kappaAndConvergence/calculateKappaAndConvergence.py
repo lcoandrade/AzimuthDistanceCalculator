@@ -90,7 +90,10 @@ class CalculateKappaAndConvergenceDialog(QDialog, FORM_CLASS):
 
         cSeconds = xii*p + xiii*math.pow(p, 3) + c5*math.pow(p, 5)
 
-        c = cSeconds/3600
+        if longitude < centralMeridian:
+            c = -cSeconds/3600
+        else:
+            c = cSeconds/3600        
 
         return c
 
