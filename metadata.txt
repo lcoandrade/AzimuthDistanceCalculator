@@ -16,7 +16,7 @@ version=2.0.2
 author=Luiz Andrade
 email=luizclaudio.andrade@eb.mil.br
 about=
-	Azimuth and Distance Calculator Version 1.0.1 also generates:
+	Azimuth and Distance Calculator Version generates:
 	- Memorial descritivo
 	- Memorial sintético
 	- Selo da planta
