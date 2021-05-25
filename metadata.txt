@@ -41,8 +41,8 @@ changelog=
 # tags are comma separated with spaces allowed
 tags=Document,UTM,Meridian,Azimuth,Patrimonial,Distance,Calculator,Factor,Convergence,Memorial,Kappa
 
-homepage=https://hub.qgis.org/projects/azimuthdistances
-tracker=https://hub.qgis.org/projects/azimuthdistances
+homepage=https://github.com/lcoandrade/AzimuthDistanceCalculator
+tracker=https://github.com/lcoandrade/AzimuthDistanceCalculator
 repository=https://github.com/lcoandrade/AzimuthDistanceCalculator
 icon=north.png
 # experimental flag
